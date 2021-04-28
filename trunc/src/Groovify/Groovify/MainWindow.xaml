@@ -6,7 +6,72 @@
         xmlns:local="clr-namespace:Groovify"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <WrapPanel DockPanel.Dock="Bottom" Background="#181818">
+            <TextBlock  Text="Play/Pause etc..." Foreground="White"/>
+        </WrapPanel>
+        <ListBox DockPanel.Dock="Left" Background="#121212" Width="100">
+            <Button Content="Titre" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Artiste" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Albums" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Genre" BorderThickness="0" Background="Transparent" Foreground="White"/>
+        </ListBox>
+        <ScrollViewer DockPanel.Dock="Top">
+            <!-->
+            <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Background="#181818">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel IsItemsHost="True" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <local:Album />
+                <local:Album />
+                <local:Album />
+                <local:Album />
+                <local:Album />
+                <local:Album />
+                <local:Album />
+                <local:Album />
+                <local:Album />
+                <local:Album />
+                <local:Album />
 
-    </Grid>
+            </ListBox>
+            <!-->
+            <ListView x:Name="ListViewSons" Width="Auto" Background="#181818" SizeChanged="ListView_SizeChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Titre">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Titre}" Foreground="White"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Artiste">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Artiste}" Foreground="White"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Album">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Album}" Foreground="White"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridView.ColumnHeaderContainerStyle>
+                            <Style TargetType="GridViewColumnHeader">
+                                <Setter Property="IsEnabled" Value="False"/>
+                                <Setter Property="Background" Value="#181818" />
+
+                            </Style>
+                        </GridView.ColumnHeaderContainerStyle>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+    </DockPanel>
 </Window>
