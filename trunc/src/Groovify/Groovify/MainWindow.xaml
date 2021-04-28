@@ -14,7 +14,6 @@
             <Button Content="Titre" BorderThickness="0" Background="Transparent" Foreground="White"/>
             <Button Content="Artiste" BorderThickness="0" Background="Transparent" Foreground="White"/>
             <Button Content="Albums" BorderThickness="0" Background="Transparent" Foreground="White"/>
-            <Button Content="Genre" BorderThickness="0" Background="Transparent" Foreground="White"/>
         </ListBox>
         <ScrollViewer DockPanel.Dock="Top">
             <!-->
@@ -38,40 +37,7 @@
 
             </ListBox>
             <!-->
-            <ListView x:Name="ListViewSons" Width="Auto" Background="#181818" SizeChanged="ListView_SizeChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Titre">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Titre}" Foreground="White"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        <GridViewColumn Header="Artiste">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Artiste}" Foreground="White"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        <GridViewColumn Header="Album">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Album}" Foreground="White"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        <GridView.ColumnHeaderContainerStyle>
-                            <Style TargetType="GridViewColumnHeader">
-                                <Setter Property="IsEnabled" Value="False"/>
-                                <Setter Property="Background" Value="#181818" />
-
-                            </Style>
-                        </GridView.ColumnHeaderContainerStyle>
-                    </GridView>
-                </ListView.View>
-            </ListView>
+            <local:VueTitres/>
         </ScrollViewer>
     </DockPanel>
 </Window>
