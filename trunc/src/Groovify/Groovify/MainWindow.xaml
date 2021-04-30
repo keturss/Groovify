@@ -16,27 +16,6 @@
             <Button Content="Albums" BorderThickness="0" Background="Transparent" Foreground="White"/>
         </ListBox>
         <ScrollViewer DockPanel.Dock="Top">
-            <!-->
-            <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Background="#181818">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel IsItemsHost="True" />
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-                <local:Album />
-                <local:Album />
-                <local:Album />
-                <local:Album />
-                <local:Album />
-                <local:Album />
-                <local:Album />
-                <local:Album />
-                <local:Album />
-                <local:Album />
-                <local:Album />
-
-            </ListBox>
-            <!-->
             <local:VueTitres/>
         </ScrollViewer>
     </DockPanel>
