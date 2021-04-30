@@ -61,7 +61,7 @@ namespace Groovify {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Groovify;component/vuetitres.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Groovify;V1.0.0.0;component/vuetitres.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\VueTitres.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

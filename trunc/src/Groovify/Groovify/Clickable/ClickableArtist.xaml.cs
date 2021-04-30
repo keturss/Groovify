@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace Groovify
 {
     /// <summary>
-    /// Logique d'interaction pour VueAlbum.xaml
+    /// Logique d'interaction pour ClickableArtist.xaml
     /// </summary>
-    public partial class VueAlbum : UserControl
+    public partial class ClickableArtist : UserControl
     {
-        public VueAlbum()
+        public ClickableArtist()
         {
             InitializeComponent();
         }

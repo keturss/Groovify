@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Eliaz\Desktop\IUT\P4\cs\svn\trunc\src\Groovify\Groovify\App.xaml
-31009580253
+6927266405
 
-10269623336
+13630725676
 192-1533232326
-MainWindow.xaml;VueAlbum.xaml;VueTitres.xaml;
+Clickable\ClickableAlbum.xaml;Clickable\ClickableArtist.xaml;MainWindow.xaml;Vues\VueAlbum.xaml;Vues\VueArtiste.xaml;Vues\VueTitres.xaml;
 
 False
 
