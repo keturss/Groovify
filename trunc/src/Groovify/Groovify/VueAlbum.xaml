@@ -12,6 +12,5 @@
                 <WrapPanel IsItemsHost="True" />
             </ItemsPanelTemplate>
         </ListBox.ItemsPanel>
-
     </ListBox>
 </UserControl>
