@@ -53,7 +53,7 @@ namespace Groovify {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Groovify;component/vuealbum.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Groovify;V1.0.0.0;component/vuealbum.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\VueAlbum.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

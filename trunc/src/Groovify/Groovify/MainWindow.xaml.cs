@@ -27,11 +27,15 @@ namespace Groovify
 
         private void ChangeVueToVueTitres(object sender, RoutedEventArgs e)
         {
-            VuePrincipale.Content = new VueTitres();
+            VuePrincipale.Content = new Vues.VueTitres();
         }
         private void ChangeVueToVueAlbum(object sender, RoutedEventArgs e)
         {
-            VuePrincipale.Content = new VueAlbum();
+            VuePrincipale.Content = new Vues.VueAlbum();
+        }
+        private void ChangeVueToVueArtiste(object sender, RoutedEventArgs e)
+        {
+            VuePrincipale.Content = new Vues.VueArtiste();
         }
     }
 }

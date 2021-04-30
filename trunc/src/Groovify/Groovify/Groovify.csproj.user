@@ -7,21 +7,39 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="VueAlbum.xaml.cs">
+    <Compile Update="Clickable\ClickableArtist.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="VueTitres.xaml.cs">
+    <Compile Update="Clickable\ClickableAlbum.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\VueAlbum.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\VueArtiste.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\VueTitres.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Clickable\ClickableArtist.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Clickable\ClickableAlbum.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="VueAlbum.xaml">
+    <Page Update="Vues\VueAlbum.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="VueTitres.xaml">
+    <Page Update="Vues\VueArtiste.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\VueTitres.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

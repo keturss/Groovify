@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Groovify
+namespace Groovify.Vues
 {
     /// <summary>
     /// Logique d'interaction pour VueTitres.xaml
@@ -20,8 +20,11 @@ namespace Groovify
     {
         public VueTitres()
         {
+            Song Will_He = new Song();
+            
             InitializeComponent();
         }
+
         private void ListView_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             ListView listView = sender as ListView;
