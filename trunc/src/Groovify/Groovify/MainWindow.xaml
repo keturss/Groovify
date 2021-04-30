@@ -11,12 +11,14 @@
             <TextBlock  Text="Play/Pause etc..." Foreground="White"/>
         </WrapPanel>
         <ListBox DockPanel.Dock="Left" Background="#121212" Width="100">
-            <Button Content="Titre" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Titre" Click="ChangeVueToVueTitres"  BorderThickness="0" Background="Transparent" Foreground="White"/>
             <Button Content="Artiste" BorderThickness="0" Background="Transparent" Foreground="White"/>
-            <Button Content="Albums" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Albums" Click="ChangeVueToVueAlbum" BorderThickness="0" Background="Transparent" Foreground="White"/>
         </ListBox>
         <ScrollViewer DockPanel.Dock="Top">
-            <local:VueTitres/>
+            <ContentControl x:Name="VuePrincipale">
+                <local:VueAlbum/>
+            </ContentControl>
         </ScrollViewer>
     </DockPanel>
 </Window>

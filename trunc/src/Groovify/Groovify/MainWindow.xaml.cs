@@ -24,5 +24,14 @@ namespace Groovify
         {
             InitializeComponent();
         }
+
+        private void ChangeVueToVueTitres(object sender, RoutedEventArgs e)
+        {
+            VuePrincipale.Content = new VueTitres();
+        }
+        private void ChangeVueToVueAlbum(object sender, RoutedEventArgs e)
+        {
+            VuePrincipale.Content = new VueAlbum();
+        }
     }
 }
