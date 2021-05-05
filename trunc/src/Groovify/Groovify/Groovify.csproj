@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Ressources\plus-64.png" />
     <None Remove="Ressources\swimming.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Ressources\plus-64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Ressources\swimming.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

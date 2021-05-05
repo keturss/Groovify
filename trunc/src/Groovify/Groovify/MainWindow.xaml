@@ -6,22 +6,35 @@
         xmlns:local="clr-namespace:Groovify"
         mc:Ignorable="d"
         Title="Groovify" Height="450" Width="800">
-    <DockPanel>
+    <DockPanel Background="#121212">
         <WrapPanel DockPanel.Dock="Bottom" Background="#181818">
             <TextBlock  Text="Play/Pause etc..." Foreground="White"/>
         </WrapPanel>
-        <ListBox DockPanel.Dock="Left" Background="#121212" Width="100">
-            <Button Content="Titre" Click="ChangeVueToVueTitres"  BorderThickness="0" Background="Transparent" Foreground="White"/>
-            <Button Content="Artiste" Click="ChangeVueToVueArtiste" BorderThickness="0" Background="Transparent" Foreground="White"/>
-            <Button Content="Albums" Click="ChangeVueToVueAlbum" BorderThickness="0" Background="Transparent" Foreground="White"/>
-            <Grid>
+        <Grid DockPanel.Dock="Left" Margin="2" Background="#121212" Width="150">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button Content="Titre" Click="ChangeVueToVueTitres" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Artiste" Click="ChangeVueToVueArtiste" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Row="1" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Albums" Click="ChangeVueToVueAlbum" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Row="2" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Grid Grid.Row="3" Margin="0, 25, 0, 0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Grid.Resources></Grid.Resources>
+                <TextBlock Text="Playlist" Foreground="White" HorizontalAlignment="Left"/>
+                <Button Click="NewPlaylist" Background="Transparent" BorderThickness="0" VerticalAlignment="Top" Height="20" Width="20" Grid.Column="1">
+                    <Image Source="Ressources/plus-64.png"/>
+                </Button>
             </Grid>
-        </ListBox>
+            <ListBox Grid.Row="4" Background="Transparent" BorderThickness="0">
+                
+            </ListBox>
+        </Grid>
         <ScrollViewer DockPanel.Dock="Top">
             <ContentControl x:Name="VuePrincipale">
                 <Vues:VueAlbum />

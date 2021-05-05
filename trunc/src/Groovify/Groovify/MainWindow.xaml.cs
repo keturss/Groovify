@@ -37,5 +37,9 @@ namespace Groovify
         {
             VuePrincipale.Content = new Vues.VueArtiste();
         }
+        private void NewPlaylist(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -20,8 +20,7 @@ namespace Groovify.Vues
     {
         public VueTitres()
         {
-            Song Will_He = new Song();
-            
+                        
             InitializeComponent();
         }
 
