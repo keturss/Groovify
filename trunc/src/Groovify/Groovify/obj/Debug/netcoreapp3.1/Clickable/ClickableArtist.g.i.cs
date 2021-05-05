@@ -61,7 +61,7 @@ namespace Groovify {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Groovify;V1.0.0.0;component/clickable/clickableartist.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Groovify;component/clickable/clickableartist.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Clickable\ClickableArtist.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
