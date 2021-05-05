@@ -14,6 +14,13 @@
             <Button Content="Titre" Click="ChangeVueToVueTitres"  BorderThickness="0" Background="Transparent" Foreground="White"/>
             <Button Content="Artiste" Click="ChangeVueToVueArtiste" BorderThickness="0" Background="Transparent" Foreground="White"/>
             <Button Content="Albums" Click="ChangeVueToVueAlbum" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.Resources></Grid.Resources>
+            </Grid>
         </ListBox>
         <ScrollViewer DockPanel.Dock="Top">
             <ContentControl x:Name="VuePrincipale">
