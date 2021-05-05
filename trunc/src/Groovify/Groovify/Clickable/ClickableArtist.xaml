@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Groovify"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Button Height="120" Width="100" Margin="10" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Button Height="120" Width="100" Margin="10" Padding="0" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top">
         <Button.Content>
             <Grid x:Name="ClikableAlbum">
                 <Grid.ColumnDefinitions>
