@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Groovify"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Groovify" Height="450" Width="800">
+
     <DockPanel Background="#121212">
         <WrapPanel DockPanel.Dock="Bottom" Background="#181818">
             <TextBlock  Text="Play/Pause etc..." Foreground="White"/>

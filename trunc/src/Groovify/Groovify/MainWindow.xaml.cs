@@ -39,7 +39,8 @@ namespace Groovify
         }
         private void NewPlaylist(object sender, RoutedEventArgs e)
         {
-
+            popup.NouvellePlaylist newPlaylist = new popup.NouvellePlaylist();
+            newPlaylist.Show();
         }
     }
 }
