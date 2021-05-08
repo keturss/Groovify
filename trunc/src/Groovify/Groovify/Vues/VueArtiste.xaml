@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Groovify.Vues"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Background="#181818">
+    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Background="#121212">
         <ListBox.ItemsPanel>
             <ItemsPanelTemplate>
                 <WrapPanel IsItemsHost="True" />

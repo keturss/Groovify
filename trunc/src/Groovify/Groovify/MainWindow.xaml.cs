@@ -18,7 +18,7 @@ namespace Groovify
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
@@ -36,6 +36,10 @@ namespace Groovify
         private void ChangeVueToVueArtiste(object sender, RoutedEventArgs e)
         {
             VuePrincipale.Content = new Vues.VueArtiste();
+        }
+        public void ChangeVueToVueDetailArtiste()
+        {
+            VuePrincipale.Content = new Vues.VueDetailArtiste();
         }
         private void NewPlaylist(object sender, RoutedEventArgs e)
         {
