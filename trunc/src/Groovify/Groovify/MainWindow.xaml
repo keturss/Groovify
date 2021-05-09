@@ -12,7 +12,7 @@
          >
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
-            <TextBlock Text="Test" Foreground="White" HorizontalAlignment="Center"/>
+            <TextBlock Text="Groovify" Foreground="White" HorizontalAlignment="Center"/>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
     <mah:MetroWindow.WindowButtonCommands>
