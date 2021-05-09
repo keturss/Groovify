@@ -25,7 +25,7 @@ namespace Groovify
 
         private void ArtistClicked(object sender, RoutedEventArgs e)
         {
-            MainWindow.ChangeVueToVueDetailArtiste();
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailArtiste();
         }
     }
 }
