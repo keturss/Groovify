@@ -22,5 +22,9 @@ namespace Groovify
         {
             InitializeComponent();
         }
+        private void AlbumClicked(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailAlbum();
+        }
     }
 }

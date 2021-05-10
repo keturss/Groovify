@@ -41,6 +41,10 @@ namespace Groovify
         {
             VuePrincipale.Content = new Vues.VueDetailArtiste();
         }
+        public void ChangeVueToVueDetailAlbum()
+        {
+            VuePrincipale.Content = new Vues.VueDetailAlbum();
+        }
         private void NewPlaylist(object sender, RoutedEventArgs e)
         {
             popup.NouvellePlaylist newPlaylist = new popup.NouvellePlaylist();

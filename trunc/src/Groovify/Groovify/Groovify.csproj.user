@@ -22,6 +22,9 @@
     <Compile Update="Vues\VueArtiste.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Vues\VueDetailAlbum.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Vues\VueDetailArtiste.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\VueArtiste.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\VueDetailAlbum.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\VueDetailArtiste.xaml">
