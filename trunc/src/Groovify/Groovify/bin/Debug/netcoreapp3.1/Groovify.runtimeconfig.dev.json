@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\Eliaz\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Eliaz\\.nuget\\packages"
-    ]
-  }
-}
