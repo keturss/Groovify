@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Groovify.Vues
 {
     /// <summary>
@@ -22,6 +23,15 @@ namespace Groovify.Vues
         {
                         
             InitializeComponent();
+
+            List<Modele.Musique> titres = new List<Modele.Musique>()
+            {
+                new Modele.Musique { Name="Come Back to Earth", NameArtiste="Mac Miller", NameAlbum="Swimming", Date=2018, Lenght=161, Path="" },
+                new Modele.Musique { Name="Hurt Feelings", NameArtiste="Mac Miller", NameAlbum="Swimming", Date=2018, Lenght=245, Path="" }
+            };
+            
+            ListViewSons.ItemsSource = titres;
+            //GridViewSons.
         }
 
         private void ListView_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -39,5 +49,7 @@ namespace Groovify.Vues
             gridView.Columns[1].Width = width * column2;
             gridView.Columns[2].Width = width * column3;
         }
+
+
     }
 }

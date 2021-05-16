@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Ressources\Icons\next-100.png" />
+    <None Remove="Ressources\Icons\play-100.png" />
     <None Remove="Ressources\plus-64.png" />
     <None Remove="Ressources\swimming.jpg" />
   </ItemGroup>
@@ -16,7 +18,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Ressources\plus-64.png">
+    <ProjectReference Include="..\Modele\Modele.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ressources\Icons\next-100.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Icons\play-100.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Icons\plus-64.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\swimming.jpg">

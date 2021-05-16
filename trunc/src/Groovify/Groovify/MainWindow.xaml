@@ -20,9 +20,9 @@
     </mah:MetroWindow.WindowButtonCommands>
 
     <DockPanel Background="#000000">
-        <WrapPanel DockPanel.Dock="Bottom" Background="#181818">
-            <TextBlock  Text="Play/Pause etc..." Foreground="White"/>
-        </WrapPanel>
+        <Grid DockPanel.Dock="Bottom" Background="#181818">
+            <local:MusicPlayer/>
+        </Grid>
         <Grid DockPanel.Dock="Left" Margin="2" Background="#000000" Width="150">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -41,7 +41,7 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Playlist" Foreground="White" HorizontalAlignment="Left"/>
                 <Button Click="NewPlaylist" Background="Transparent" BorderThickness="0" VerticalAlignment="Top" Height="20" Width="20" Grid.Column="1">
-                    <Image Source="Ressources/plus-64.png"/>
+                    <Image Source="Ressources/Icons/plus-64.png"/>
                 </Button>
             </Grid>
             <ListBox x:Name="ListePlaylists" Grid.Row="4" Background="Transparent" BorderThickness="0">

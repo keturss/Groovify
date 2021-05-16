@@ -8,25 +8,25 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <ListView x:Name="ListViewSons" Width="Auto" Background="#121212" SizeChanged="ListView_SizeChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
         <ListView.View>
-            <GridView>
+            <GridView x:Name="GridViewSons">
                 <GridViewColumn Header="Titre">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Titre}" Foreground="White"/>
+                            <TextBlock Text="{Binding Name}" Foreground="White"/>
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
                 <GridViewColumn Header="Artiste">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Artiste}" Foreground="White"/>
+                            <TextBlock Text="{Binding NameArtiste}" Foreground="White"/>
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
                 <GridViewColumn Header="Album">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Album}" Foreground="White"/>
+                            <TextBlock Text="{Binding NameAlbum}" Foreground="White"/>
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
