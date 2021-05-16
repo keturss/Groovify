@@ -13,6 +13,9 @@
     <Compile Update="Clickable\ClickableAlbum.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MusicPlayer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="popup\NouvellePlaylist.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MusicPlayer.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="popup\NouvellePlaylist.xaml">
