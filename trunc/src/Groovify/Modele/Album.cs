@@ -4,16 +4,34 @@ using System.Text;
 
 namespace Modele
 {
-    class Album
+    public class Album
     {
         public String Name { get; set; }
-        private DateTime Date { get; set; }
-        private String Image { get; set; }
+        public int Date { get; set; }
+        public String Image { get; set; }
 
-        public Album(String name, DateTime date)
+        public List<Musique> ListeMusique = new List<Musique>();
+
+        public Album(String name, List<Artiste> ListeArtiste, string nomArtiste)
         {
             Name = name;
-            Date = date;
+
+            int index = ListeArtiste.FindIndex(x => x.Name == nomArtiste);
+            if (index < 0) // Si le nom de l album n'existe pas 
+            {
+                //Creation de l'album
+                ListeArtiste.Add(new Artiste(nomArtiste));
+                Console.WriteLine("Creation artiste");
+            }
+        }
+
+        public Album(){}
+
+
+
+        public override string ToString()
+        {
+            return "Album => Nom : " + Name;
         }
     }
 }

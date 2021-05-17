@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Modele
 {
-    class Playlist
+    public class Playlist
     {
-        private String Name { get; set; }
-        private List<Musique> musiquePlaylist = new List<Musique>();
+        public String Name { get; set; }
+
+        public List<Musique> musiquePlaylist = new List<Musique>();
 
         public void addMusic(Musique musique)
         {
