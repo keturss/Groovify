@@ -6,8 +6,7 @@ namespace Modele
 {
     public class Manager
     {
-        public List<Playlist> ListePlaylists = new List<Playlist>();
-
+        public List<Playlist> ListePlaylists { get; set; } = new List<Playlist>();
         public Manager() 
         {
             Playlist newplaylist = new Playlist { Name = "test" };
