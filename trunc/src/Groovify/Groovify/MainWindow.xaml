@@ -44,8 +44,12 @@
                     <Image Source="Ressources/Icons/plus-64.png"/>
                 </Button>
             </Grid>
-            <ListBox x:Name="ListePlaylists" Grid.Row="4" Background="Transparent" BorderThickness="0">
-                
+            <ListBox ItemsSource="{Binding ListePlaylists}" Name="ListePlaylists" Grid.Row="4" Background="Transparent" BorderThickness="0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" Foreground="White"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
         <ScrollViewer DockPanel.Dock="Top">
