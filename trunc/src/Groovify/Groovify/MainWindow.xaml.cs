@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Modele;
 
 namespace Groovify
 {
@@ -20,9 +22,11 @@ namespace Groovify
     /// </summary>
     public partial class MainWindow
     {
+        public Manager ElManager => (App.Current as App).managerTest;
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = ElManager;
         }
 
         private void ChangeVueToVueTitres(object sender, RoutedEventArgs e)
@@ -49,6 +53,12 @@ namespace Groovify
         {
             popup.NouvellePlaylist newPlaylist = new popup.NouvellePlaylist();
             newPlaylist.Show();
+            foreach (Playlist playlist in ElManager.ListePlaylists)
+            {
+                Debug.WriteLine(playlist.Name);
+            }
+            ListePlaylists.ItemsSource = ElManager.ListePlaylists;
         }
+        
     }
 }

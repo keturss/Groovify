@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Modele;
 
 namespace Groovify
 {
@@ -13,5 +14,7 @@ namespace Groovify
     /// </summary>
     public partial class App : Application
     {
+        public Manager managerTest = new Manager();
+
     }
 }

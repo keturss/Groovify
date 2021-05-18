@@ -6,32 +6,27 @@ namespace Modele
 {
     public class Manager
     {
-        List<Artiste> ListeArtiste = new List<Artiste>();
+        public List<Playlist> ListePlaylists = new List<Playlist>();
 
-
-        public List<Musique> AllMusic()
+        public Manager() 
         {
-            List<Musique> ListeOeuvre = new List<Musique>();
+            Playlist newplaylist = new Playlist { Name = "test" };
+            ListePlaylists.Add(newplaylist);
+        }
+        public bool AjoutePlaylist(Playlist p)
+        {
+            ListePlaylists.Add(p);
+            return true;
+        }
+        public bool ModifierPlaylist(Playlist p)
+        {
+            return true;
+        }
+        public bool SupprimerPlaylist(Playlist p)
+        {
             
-            foreach(Artiste aRtiste in ListeArtiste)
-            {
-                foreach (Album aLbum in ListeAlbum)
-                {
-                    foreach (Musique mUsique in ListeMusique)
-                    {
-                        ListeOeuvre.add(mUsique);
-                    }
-                }
-            }
-            
-
-            return ListeOeuvre;
+            return true;
         }
 
-
-        public Artiste rechercheArtiste(string name)
-        {
-
-        }
     }
 }
