@@ -9,8 +9,7 @@ namespace Modele
         public List<Playlist> ListePlaylists { get; set; } = new List<Playlist>();
         public Manager() 
         {
-            Playlist newplaylist = new Playlist { Name = "test" };
-            ListePlaylists.Add(newplaylist);
+            
         }
         public bool AjoutePlaylist(Playlist p)
         {
