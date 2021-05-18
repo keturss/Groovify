@@ -52,13 +52,11 @@ namespace Groovify
         private void NewPlaylist(object sender, RoutedEventArgs e)
         {
             popup.NouvellePlaylist newPlaylist = new popup.NouvellePlaylist();
-            newPlaylist.Show();
-            foreach (Playlist playlist in ElManager.ListePlaylists)
-            {
-                Debug.WriteLine(playlist.Name);
-            }
-            ListePlaylists.ItemsSource = ElManager.ListePlaylists;
+            newPlaylist.Show();            
         }
-        
+        public void RefreshListePlaylist()
+        {
+            ListePlaylists.Items.Refresh();
+        }
     }
 }
