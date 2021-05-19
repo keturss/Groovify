@@ -7,34 +7,101 @@ namespace Modele
     public class Manager
     {
         public List<Playlist> ListePlaylists { get; set; } = new List<Playlist>();
+        public List<Artiste> ListeArtiste { get; set; } = new List<Artiste>();
         public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>()
         {
-                new Musique { Name="Come Back to Earth", NameArtiste="Mac Miller", NameAlbum="Swimming", Lenght=161, Path="" },
-                new Musique { Name="Hurt Feelings", NameArtiste="Mac Miller", NameAlbum="Swimming", Lenght=245, Path="" }
+                new Musique { Name="Come Back to Earth", Lenght=161, Path="" },
+                new Musique { Name="Hurt Feelings", Lenght=245, Path="" }
         };
         public Album Swiming { get; set; }
         List<Album> listeAlbumsMacMiller { get; set; } = new List<Album>();
-        public Artiste Mac_Miller { get; set; } 
-        public Manager() 
+        public Artiste Mac_Miller { get; set; }
+        public Manager()
         {
             Swiming = new Album { ListeMusique = ListeToutesMusiques };
             listeAlbumsMacMiller.Add(Swiming);
-            Mac_Miller = new Artiste("Mac Miller") { ListeAlbum = listeAlbumsMacMiller};
+            Mac_Miller = new Artiste("Mac Miller") { ListeAlbum = listeAlbumsMacMiller };
         }
+
+
+
+        // Gestion Playlist
         public bool AjoutePlaylist(Playlist p)
         {
             ListePlaylists.Add(p);
-            return true;
+            return true; // les return bool ne servent strictement a rien
         }
-        public bool ModifierPlaylist(Playlist p)
+        public bool ModifierPlaylist(Playlist p, String name, String newName)
         {
-            return true;
+            Playlist trouverPlaylist = ListePlaylists.Find(x => x.Name == name);
+            trouverPlaylist.Name = newName;
+
+            return true; // les return bool ne servent strictement a rien
         }
         public bool SupprimerPlaylist(Playlist p)
         {
-            
-            return true;
+            return ListePlaylists.Remove(p); // ca return un bool
         }
 
+
+        // Gestion musique
+        public void nouvelleMusique(String name, String nomArtiste, String nomAlbum)
+        {
+            Artiste chercheArtiste = rechercheArtiste(nomArtiste);
+            if (chercheArtiste == null)
+            {
+                chercheArtiste = new Artiste(nomArtiste);
+                ListeArtiste.Add(chercheArtiste);
+                Console.WriteLine("Creation artiste");
+            }
+
+            Album chercheAlbum = rechercheAlbum(nomAlbum, chercheArtiste);
+            if (chercheAlbum == null)
+            {
+                chercheAlbum = new Album(nomAlbum);
+                chercheArtiste.ListeAlbum.Add(chercheAlbum);
+                Console.WriteLine("Creation album");
+            }
+
+            Musique chercheMusique = rechercheMusique(nomAlbum, chercheAlbum);
+            if (chercheMusique == null)
+            {
+                chercheMusique = new Musique(name);
+                chercheAlbum.ListeMusique.Add(chercheMusique);
+                Console.WriteLine("Creation Musique");
+            }
+
+        }
+
+        public Artiste rechercheArtiste(String name)
+        {
+            if (ListeArtiste.Exists(x => x.Name == name))
+            {
+                Artiste trouveArtiste = ListeArtiste.Find(x => x.Name == name);
+                return trouveArtiste;
+            }
+            return null;
+        }
+
+        public Album rechercheAlbum(String name, Artiste nameArtiste)
+        {
+            return null;
+        }
+
+        public Musique rechercheMusique(String name, Album nomAlbum)
+        {
+            return null;
+        }
+
+        public Playlist recherchePlaylist(String name)
+        {
+            if (ListePlaylists.Exists(x => x.Name == name))
+            {
+                Playlist trouvePlaylist = ListePlaylists.Find(x => x.Name == name);
+                return trouvePlaylist;
+            }
+            return null;
+        }
     }
 }
+
