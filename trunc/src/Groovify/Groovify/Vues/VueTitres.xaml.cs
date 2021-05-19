@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Modele;
 
 
 namespace Groovify.Vues
@@ -19,17 +20,9 @@ namespace Groovify.Vues
     /// </summary>
     public partial class VueTitres : UserControl
     {
-        public VueTitres()
+        public VueTitres(List<Musique> titres)
         {
-                        
             InitializeComponent();
-
-            List<Modele.Musique> titres = new List<Modele.Musique>()
-            {
-                new Modele.Musique { Name="Come Back to Earth", NameArtiste="Mac Miller", NameAlbum="Swimming", Lenght=161, Path="" },
-                new Modele.Musique { Name="Hurt Feelings", NameArtiste="Mac Miller", NameAlbum="Swimming", Lenght=245, Path="" }
-            };
-            
             ListViewSons.ItemsSource = titres;
             //GridViewSons.
         }

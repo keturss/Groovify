@@ -12,6 +12,8 @@
             <TextBlock Text="Swimming" Margin="10" Foreground="White"/>
         </WrapPanel>
         <TextBlock Text="Titres" Foreground="White" DockPanel.Dock="Top"/>
-        <local:VueTitres DockPanel.Dock="Top" BorderThickness="0"/>
+        <ContentControl x:Name="Titres" DockPanel.Dock="Top" BorderThickness="0">
+            
+        </ContentControl>
     </DockPanel>
 </UserControl>
