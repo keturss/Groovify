@@ -12,17 +12,9 @@ namespace Modele
 
         public List<Musique> ListeMusique { get; set; } = new List<Musique>();
 
-        public Album(String name, List<Artiste> ListeArtiste, string nomArtiste)
+        public Album(String name)
         {
             Name = name;
-
-            int index = ListeArtiste.FindIndex(x => x.Name == nomArtiste);
-            if (index < 0) // Si le nom de l album n'existe pas 
-            {
-                //Creation de l'album
-                ListeArtiste.Add(new Artiste(nomArtiste));
-                Console.WriteLine("Creation artiste");
-            }
         }
 
         public Album(){}
