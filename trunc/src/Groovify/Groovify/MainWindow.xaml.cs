@@ -41,22 +41,35 @@ namespace Groovify
         {
             VuePrincipale.Content = new Vues.VueArtiste();
         }
+
         public void ChangeVueToVueDetailArtiste()
         {
-            VuePrincipale.Content = new Vues.VueDetailArtiste();
+            VuePrincipale.Content = new Vues.VueDetailArtiste(ElManager.Mac_Miller);
         }
         public void ChangeVueToVueDetailAlbum()
         {
             VuePrincipale.Content = new Vues.VueDetailAlbum(ElManager.Swiming);
         }
-        private void NewPlaylist(object sender, RoutedEventArgs e)
-        {
-            popup.NouvellePlaylist newPlaylist = new popup.NouvellePlaylist();
-            newPlaylist.Show();            
-        }
         public void RefreshListePlaylist()
         {
             ListePlaylists.Items.Refresh();
+        }
+
+        private void NewPlaylist(object sender, RoutedEventArgs e)
+        {
+            popup.NouvellePlaylist newPlaylist = new popup.NouvellePlaylist();
+            newPlaylist.Show();
+        }
+        private void MenuItemDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (ListePlaylists.SelectedIndex == -1) return;
+
+            // Hypothetical function GetElement retrieves some element
+            int element = ListePlaylists.SelectedIndex;
+
+            // Hypothetical function DeleteElement
+            ElManager.SupprimerPlaylist(ElManager.ListePlaylists[element]);
+            RefreshListePlaylist();
         }
     }
 }
