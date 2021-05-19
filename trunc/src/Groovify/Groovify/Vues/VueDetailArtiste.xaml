@@ -40,7 +40,9 @@
                 <Groovify:ClickableAlbum />
             </ListBox>
             <TextBlock Text="Titres" Grid.Row="2" Foreground="White"/>
-            <local:VueTitres Grid.Row="3"/>
+            <ContentControl x:Name="Titres" Grid.Row="3">
+                
+            </ContentControl>
         </Grid>
 </DockPanel>
 </UserControl>

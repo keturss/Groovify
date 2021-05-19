@@ -45,6 +45,11 @@
                 </Button>
             </Grid>
             <ListBox ItemsSource="{Binding ListePlaylists}" Name="ListePlaylists" Grid.Row="4" Background="Transparent" BorderThickness="0">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Supprimer" Click="MenuItemDelete_Click"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Name}" Foreground="White"/>
