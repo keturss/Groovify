@@ -31,7 +31,7 @@ namespace Groovify
 
         private void ChangeVueToVueTitres(object sender, RoutedEventArgs e)
         {
-            VuePrincipale.Content = new Vues.VueTitres();
+            VuePrincipale.Content = new Vues.VueTitres(ElManager.ListeToutesMusiques);
         }
         private void ChangeVueToVueAlbum(object sender, RoutedEventArgs e)
         {
@@ -47,7 +47,7 @@ namespace Groovify
         }
         public void ChangeVueToVueDetailAlbum()
         {
-            VuePrincipale.Content = new Vues.VueDetailAlbum();
+            VuePrincipale.Content = new Vues.VueDetailAlbum(ElManager.Swiming);
         }
         private void NewPlaylist(object sender, RoutedEventArgs e)
         {

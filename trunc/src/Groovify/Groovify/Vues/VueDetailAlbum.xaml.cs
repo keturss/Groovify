@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Modele;
 
 namespace Groovify.Vues
 {
@@ -18,9 +19,10 @@ namespace Groovify.Vues
     /// </summary>
     public partial class VueDetailAlbum : UserControl
     {
-        public VueDetailAlbum()
+        public VueDetailAlbum(Album album)
         {
             InitializeComponent();
+            Titres.Content = new Vues.VueTitres(album.ListeMusique);
         }
     }
 }

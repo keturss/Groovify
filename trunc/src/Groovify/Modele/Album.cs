@@ -10,7 +10,7 @@ namespace Modele
         public int Date { get; set; }
         public String Image { get; set; }
 
-        public List<Musique> ListeMusique = new List<Musique>();
+        public List<Musique> ListeMusique { get; set; } = new List<Musique>();
 
         public Album(String name, List<Artiste> ListeArtiste, string nomArtiste)
         {
@@ -26,8 +26,6 @@ namespace Modele
         }
 
         public Album(){}
-
-
 
         public override string ToString()
         {
