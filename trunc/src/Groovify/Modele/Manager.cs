@@ -10,8 +10,8 @@ namespace Modele
         public List<Artiste> ListeArtiste { get; set; } = new List<Artiste>();
         public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>()
         {
-                new Musique { Name="Come Back to Earth", Lenght=161, Path="" },
-                new Musique { Name="Hurt Feelings", Lenght=245, Path="" }
+                new Musique { Name="Come Back to Earth",NameArtiste="salut",NameAlbum="aze", Lenght=161, Path="" },
+                new Musique { Name="Hurt Feelings",NameArtiste="salut",NameAlbum="aze", Lenght=245, Path="" }
         };
         public Album Swiming { get; set; }
         List<Album> listeAlbumsMacMiller { get; set; } = new List<Album>();
@@ -44,7 +44,7 @@ namespace Modele
         }
 
 
-        // Gestion musique
+        // Gestion musique (CREEATION)
         public void nouvelleMusique(String name, String nomArtiste, String nomAlbum)
         {
             Artiste chercheArtiste = rechercheArtiste(nomArtiste);
@@ -73,10 +73,12 @@ namespace Modele
 
         }
 
+        // recherche a déplacer dans un interface.
         public Artiste rechercheArtiste(String name)
         {
             if (ListeArtiste.Exists(x => x.Name == name))
             {
+                Console.WriteLine("artiste trouvée");
                 Artiste trouveArtiste = ListeArtiste.Find(x => x.Name == name);
                 return trouveArtiste;
             }
@@ -85,11 +87,23 @@ namespace Modele
 
         public Album rechercheAlbum(String name, Artiste nameArtiste)
         {
+            if (nameArtiste.ListeAlbum.Exists(x => x.Name == name))
+            {
+                Console.WriteLine("album trouvée");
+                Album trouveAlbum = nameArtiste.ListeAlbum.Find(x => x.Name == name);
+                return trouveAlbum;
+            }
             return null;
         }
 
         public Musique rechercheMusique(String name, Album nomAlbum)
         {
+            if (nomAlbum.ListeMusique.Exists(x => x.Name == name))
+            {
+                Console.WriteLine("musique trouvée");
+                Musique trouveMusique = nomAlbum.ListeMusique.Find(x => x.Name == name);
+                return trouveMusique;
+            }
             return null;
         }
 

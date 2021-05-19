@@ -11,6 +11,9 @@ namespace Modele
         public int Lenght { get; set; }
         public String Path { get; set; }
         public DateTime Date { get; set; }
+        public String NameArtiste { get; set; }
+        public String NameAlbum { get; set; }
+
 
         public Musique(String name)
         {

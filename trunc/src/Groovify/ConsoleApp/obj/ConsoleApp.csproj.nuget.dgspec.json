@@ -1,35 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\ConsoleApp\\ConsoleApp.csproj": {}
+    "U:\\Projet\\trunc\\src\\Groovify\\ConsoleApp\\ConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\ConsoleApp\\ConsoleApp.csproj": {
+    "U:\\Projet\\trunc\\src\\Groovify\\ConsoleApp\\ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\ConsoleApp\\ConsoleApp.csproj",
+        "projectUniqueName": "U:\\Projet\\trunc\\src\\Groovify\\ConsoleApp\\ConsoleApp.csproj",
         "projectName": "ConsoleApp",
-        "projectPath": "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\ConsoleApp\\ConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\Eliaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\ConsoleApp\\obj\\",
+        "projectPath": "U:\\Projet\\trunc\\src\\Groovify\\ConsoleApp\\ConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\mabroquet1\\.nuget\\packages\\",
+        "outputPath": "U:\\Projet\\trunc\\src\\Groovify\\ConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Eliaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mabroquet1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\Modele\\Modele.csproj": {
-                "projectPath": "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\Modele\\Modele.csproj"
+              "U:\\Projet\\trunc\\src\\Groovify\\Modele\\Modele.csproj": {
+                "projectPath": "U:\\Projet\\trunc\\src\\Groovify\\Modele\\Modele.csproj"
               }
             }
           }
@@ -41,8 +48,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -53,22 +60,34 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\Modele\\Modele.csproj": {
+    "U:\\Projet\\trunc\\src\\Groovify\\Modele\\Modele.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\Modele\\Modele.csproj",
+        "projectUniqueName": "U:\\Projet\\trunc\\src\\Groovify\\Modele\\Modele.csproj",
         "projectName": "Modele",
-        "projectPath": "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\Modele\\Modele.csproj",
-        "packagesPath": "C:\\Users\\Eliaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eliaz\\Desktop\\IUT\\P4\\cs\\svn\\trunc\\src\\Groovify\\Modele\\obj\\",
+        "projectPath": "U:\\Projet\\trunc\\src\\Groovify\\Modele\\Modele.csproj",
+        "packagesPath": "C:\\Users\\mabroquet1\\.nuget\\packages\\",
+        "outputPath": "U:\\Projet\\trunc\\src\\Groovify\\Modele\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Eliaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mabroquet1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
