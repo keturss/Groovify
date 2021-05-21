@@ -29,12 +29,14 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Button Content="Titre" Click="ChangeVueToVueTitres" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" BorderThickness="0" Background="Transparent" Foreground="White"/>
-            <Button Content="Artiste" Click="ChangeVueToVueArtiste" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Row="1" BorderThickness="0" Background="Transparent" Foreground="White"/>
-            <Button Content="Albums" Click="ChangeVueToVueAlbum" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Row="2" BorderThickness="0" Background="Transparent" Foreground="White"/>
-            <Grid Grid.Row="3" Margin="0, 25, 0, 0">
+            <local:SearchBar/>
+            <Button Content="Titre" Click="ChangeVueToVueTitres" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Row="1" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Artiste" Click="ChangeVueToVueArtiste" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Row="2" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Button Content="Albums" Click="ChangeVueToVueAlbum" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Row="3" BorderThickness="0" Background="Transparent" Foreground="White"/>
+            <Grid Grid.Row="4" Margin="0, 25, 0, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition Width="Auto"/>
@@ -44,7 +46,7 @@
                     <Image Source="Ressources/Icons/plus-64.png"/>
                 </Button>
             </Grid>
-            <ListBox ItemsSource="{Binding ListePlaylists}" Name="ListePlaylists" HorizontalContentAlignment="Stretch" Grid.Row="4" Background="Transparent" BorderThickness="0">
+            <ListBox ItemsSource="{Binding ListePlaylists}" Name="ListePlaylists" HorizontalContentAlignment="Stretch" Grid.Row="5" Background="Transparent" BorderThickness="0">
                 <ListBox.ContextMenu>
                     <ContextMenu>
                         <MenuItem Header="Supprimer" Click="MenuItemDelete_Click"/>
@@ -59,7 +61,7 @@
         </Grid>
         <ScrollViewer DockPanel.Dock="Top">
             <ContentControl x:Name="VuePrincipale">
-                <Vues:VueAlbum />
+                <Vues:VueArtiste />
             </ContentControl>
         </ScrollViewer>
     </DockPanel>
