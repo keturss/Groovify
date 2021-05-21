@@ -10,6 +10,9 @@ namespace Modele
     {
         public ObservableCollection<Playlist> ListePlaylists { get; set; } = new ObservableCollection<Playlist>();
         public List<Artiste> ListeArtiste { get; set; } = new List<Artiste>();
+
+
+
         public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>()
         {
                 new Musique { Name="Come Back to Earth",NameArtiste="salut",NameAlbum="aze", Lenght=161, Path="" },
@@ -30,15 +33,18 @@ namespace Modele
         // Gestion Playlist
         public bool AjoutePlaylist(Playlist p)
         {
-            ListePlaylists.Add(p);
-            return true; // les return bool ne servent strictement a rien
+            if (ListePlaylists.Any(x => x.Name == p.Name))
+            {
+                ListePlaylists.Add(p);
+                return true;
+            }
+            return false;
         }
 
         public bool ModifierPlaylist(Playlist p, String name, String newName)
         {
             Playlist trouverPlaylist = ListePlaylists.First(x => x.Name == name);
             trouverPlaylist.Name = newName;
-
             return true; // les return bool ne servent strictement a rien
         }
         public bool SupprimerPlaylist(Playlist p)
