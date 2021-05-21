@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
+using System.Linq;
 
 namespace Modele
 {
     public class Manager
     {
-        public List<Playlist> ListePlaylists { get; set; } = new List<Playlist>();
+        public ObservableCollection<Playlist> ListePlaylists { get; set; } = new ObservableCollection<Playlist>();
         public List<Artiste> ListeArtiste { get; set; } = new List<Artiste>();
         public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>()
         {
@@ -31,9 +33,10 @@ namespace Modele
             ListePlaylists.Add(p);
             return true; // les return bool ne servent strictement a rien
         }
+
         public bool ModifierPlaylist(Playlist p, String name, String newName)
         {
-            Playlist trouverPlaylist = ListePlaylists.Find(x => x.Name == name);
+            Playlist trouverPlaylist = ListePlaylists.First(x => x.Name == name);
             trouverPlaylist.Name = newName;
 
             return true; // les return bool ne servent strictement a rien
@@ -109,9 +112,9 @@ namespace Modele
 
         public Playlist recherchePlaylist(String name)
         {
-            if (ListePlaylists.Exists(x => x.Name == name))
+            if (ListePlaylists.Any(x => x.Name == name))
             {
-                Playlist trouvePlaylist = ListePlaylists.Find(x => x.Name == name);
+                Playlist trouvePlaylist = ListePlaylists.First(x => x.Name == name);
                 return trouvePlaylist;
             }
             return null;
