@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,13 +21,28 @@ namespace Groovify.Vues
     /// </summary>
     public partial class VueTitres : UserControl
     {
+        public Manager ElManager => (App.Current as App).managerTest;
+        private List<Musique> titres = new List<Musique>();
         public VueTitres(List<Musique> titres)
         {
             InitializeComponent();
+            DataContext = ElManager;
             ListViewSons.ItemsSource = titres;
-            //GridViewSons.
+            this.titres = titres;
         }
 
+        private void AddSongToPlaylist(object sender, RoutedEventArgs e)
+        {
+            if (ListViewSons.SelectedIndex == -1) return;
+
+            var clickedMenuItem = e.OriginalSource as MenuItem;
+            int musique = ListViewSons.SelectedIndex;
+            //int playlist = MenuItemClickDroitSons.Items.IndexOf(clickedMenuItem.Items) ;
+            Debug.WriteLine("chanson cliquée : "+ musique);
+            Debug.WriteLine(clickedMenuItem.Header);
+            Playlist playlist = ElManager.recherchePlaylist(clickedMenuItem.Header.ToString());
+            playlist.addMusic(titres[musique]);
+        }
         private void ListView_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             ListView listView = sender as ListView;
