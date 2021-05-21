@@ -50,10 +50,6 @@ namespace Groovify
         {
             VuePrincipale.Content = new Vues.VueDetailAlbum(ElManager.Swiming);
         }
-        public void RefreshListePlaylist()
-        {
-            ListePlaylists.Items.Refresh();
-        }
 
         private void NewPlaylist(object sender, RoutedEventArgs e)
         {
@@ -64,12 +60,15 @@ namespace Groovify
         {
             if (ListePlaylists.SelectedIndex == -1) return;
 
-            // Hypothetical function GetElement retrieves some element
             int element = ListePlaylists.SelectedIndex;
-
-            // Hypothetical function DeleteElement
             ElManager.SupprimerPlaylist(ElManager.ListePlaylists[element]);
-            RefreshListePlaylist();
+        }
+        private void MenuPlaylistVoir(object sender, RoutedEventArgs e)
+        {
+            Button playlistToSee = (Button)sender;
+            Debug.WriteLine(playlistToSee.DataContext);
+            Playlist playlist = ElManager.recherchePlaylist(playlistToSee.DataContext.ToString());
+            VuePrincipale.Content = new Vues.VueTitres(playlist.musiquePlaylist);
         }
     }
 }

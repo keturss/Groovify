@@ -7,6 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <ListView x:Name="ListViewSons" Width="Auto" Background="#121212" SizeChanged="ListView_SizeChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListBox.ContextMenu>
+            <ContextMenu x:Name="MenuClickDroitSons">
+                <MenuItem x:Name="MenuItemClickDroitSons" Header="Ajouter à..." ItemsSource="{Binding ListePlaylists}" Click="AddSongToPlaylist"/>
+            </ContextMenu>
+        </ListBox.ContextMenu>
         <ListView.View>
             <GridView x:Name="GridViewSons">
                 <GridViewColumn Header="Titre">
