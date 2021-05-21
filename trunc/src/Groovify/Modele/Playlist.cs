@@ -20,7 +20,10 @@ namespace Modele
         {
             musiquePlaylist.Remove(musique);
         }
-
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
 
     }
 }
