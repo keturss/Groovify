@@ -24,20 +24,13 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="Albums" Foreground="White"/>
-            <ListBox  Grid.Row="1" Background="Transparent" BorderThickness="0">
+            <ListBox x:Name="Albums" ItemsSource="{Binding ListeAlbum}" Grid.Row="1" Background="Transparent" BorderThickness="0">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" />
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
-                <Groovify:ClickableAlbum />
-                <Groovify:ClickableAlbum />
-                <Groovify:ClickableAlbum />
-                <Groovify:ClickableAlbum />
-                <Groovify:ClickableAlbum />
-                <Groovify:ClickableAlbum />
-                <Groovify:ClickableAlbum />
-                <Groovify:ClickableAlbum />
+                <Groovify:ClickableAlbum/>
             </ListBox>
             <TextBlock Text="Titres" Grid.Row="2" Foreground="White"/>
             <ContentControl x:Name="Titres" Grid.Row="3">
