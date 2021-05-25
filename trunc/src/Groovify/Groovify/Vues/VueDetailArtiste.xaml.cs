@@ -22,12 +22,13 @@ namespace Groovify.Vues
         public VueDetailArtiste(Artiste artiste)
         {
             InitializeComponent();
+            DataContext = artiste;
             List<Musique> ToutesMusiques = new List<Musique>();
             foreach(Album album in artiste.ListeAlbum)
             {
                 ToutesMusiques.AddRange(album.ListeMusique);
             }
-
+            Albums.
             Titres.Content = new Vues.VueTitres(ToutesMusiques);
         }
     }
