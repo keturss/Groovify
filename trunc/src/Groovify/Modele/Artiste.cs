@@ -10,7 +10,7 @@ namespace Modele
         public String Description { get; set; }
         public String Image { get; set; }
 
-        public List<Album> ListeAlbum = new List<Album>();
+        public List<Album> ListeAlbum { get; set; } = new List<Album>();
 
         public Artiste(String name)
         {
