@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Modele;
 
 namespace Groovify
 {
@@ -18,13 +19,16 @@ namespace Groovify
     /// </summary>
     public partial class ClickableAlbum : UserControl
     {
-        public ClickableAlbum()
+        Album album;
+        public ClickableAlbum(Album album)
         {
             InitializeComponent();
+            DataContext = album;
+            this.album = album;
         }
         private void AlbumClicked(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailAlbum();
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailAlbum(album);
         }
     }
 }

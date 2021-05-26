@@ -22,6 +22,7 @@ namespace Groovify.Vues
         public VueDetailAlbum(Album album)
         {
             InitializeComponent();
+            DataContext = album;
             Titres.Content = new Vues.VueTitres(album.ListeMusique);
         }
     }

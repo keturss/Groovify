@@ -16,8 +16,8 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Image Source="../Ressources/swimming.jpg" Height="100" Width="100"/>
-                <TextBlock Text="Swimming" Foreground="White" Grid.Row="1" TextAlignment="Center"/>
+                <Image Source="{Binding Image}" Height="100" Width="100"/>
+                <TextBlock Text="{Binding Name}" Foreground="White" Grid.Row="1" TextAlignment="Center"/>
             </Grid>
         </Button.Content>
     </Button>

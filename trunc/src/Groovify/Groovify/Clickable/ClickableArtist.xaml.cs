@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Modele;
 
 namespace Groovify
 {
@@ -18,14 +19,17 @@ namespace Groovify
     /// </summary>
     public partial class ClickableArtist : UserControl
     {
-        public ClickableArtist()
+        Artiste artiste1 = new Artiste();
+        public ClickableArtist(Artiste artiste)
         {
             InitializeComponent();
+            DataContext = artiste;
+            artiste1 = artiste;
         }
 
         private void ArtistClicked(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailArtiste();
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailArtiste(artiste1);
         }
     }
 }

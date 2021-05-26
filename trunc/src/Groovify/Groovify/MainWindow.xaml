@@ -60,9 +60,7 @@
             </ListBox>
         </Grid>
         <ScrollViewer DockPanel.Dock="Top">
-            <ContentControl x:Name="VuePrincipale">
-                <Vues:VueArtiste />
-            </ContentControl>
+            <ContentControl x:Name="VuePrincipale"/>
         </ScrollViewer>
     </DockPanel>
 </mah:MetroWindow>
