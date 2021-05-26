@@ -72,11 +72,12 @@ namespace Modele
         // Gestion Playlist
         public bool AjoutePlaylist(Playlist p)
         {
-            if (ListePlaylists.Any(x => x.Name == p.Name))
+            if (!ListePlaylists.Any(x => x.Name == p.Name))
             {
                 ListePlaylists.Add(p);
                 return true;
             }
+            Debug.WriteLine("On peut pas creer la playlist");
             return false;
         }
 
