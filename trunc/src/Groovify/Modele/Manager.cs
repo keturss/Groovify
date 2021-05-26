@@ -13,21 +13,15 @@ namespace Modele
         public ObservableCollection<Playlist> ListePlaylists { get; set; } = new ObservableCollection<Playlist>();
         public List<Artiste> ListeArtiste { get; set; } = new List<Artiste>();
 
-
-
-        public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>()
-        {
-                new Musique { Name="Come Back to Earth",NameArtiste="salut",NameAlbum="aze", Lenght=161, Path="" },
-                new Musique { Name="Hurt Feelings",NameArtiste="salut",NameAlbum="aze", Lenght=245, Path="" }
-        };
-        public Album Swiming { get; set; }
-        List<Album> listeAlbumsMacMiller { get; set; } = new List<Album>();
+        public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>();
+        //public Album Swiming { get; set; }
+        //List<Album> listeAlbumsMacMiller { get; set; } = new List<Album>();
         public Artiste Mac_Miller { get; set; }
         public Manager()
         {
-            Swiming = new Album { ListeMusique = ListeToutesMusiques };
-            listeAlbumsMacMiller.Add(Swiming);
-            Mac_Miller = new Artiste("Mac Miller") { ListeAlbum = listeAlbumsMacMiller };
+            //Swiming = new Album { ListeMusique = ListeToutesMusiques };
+            //listeAlbumsMacMiller.Add(Swiming);
+            //Mac_Miller = new Artiste("Mac Miller") { ListeAlbum = listeAlbumsMacMiller };
             ImportFichiers();
         }
 
@@ -39,17 +33,34 @@ namespace Modele
             foreach (DirectoryInfo dirArtiste in dirArtistes)
             {
                 DirectoryInfo[] dirAlbums = dirArtiste.GetDirectories();
+                Artiste artiste = new Artiste { Name = dirArtiste.Name };
+                List<Album> albumsArtiste = new List<Album>();
                 foreach (DirectoryInfo dirAlbum in dirAlbums)
                 {
-                    var fichiers = dirAlbum.GetFiles();
+                    FileInfo[] fichiers = dirAlbum.GetFiles();
+                    Album album = new Album { Name = dirAlbum.Name };
+                    List<Musique> musiquesAlbum = new List<Musique>();
                     foreach (FileInfo file in fichiers)
                     {
                         string name = file.Name;
                         name = Path.GetFileNameWithoutExtension(name);
                         Debug.WriteLine("DirectoryName : " + file.DirectoryName+ " Extension : " + file.Extension+ " Name : " + name);
+                        if (file.Extension==".mp3") //a ajouter : d'autres formats que mp3 si possible
+                        {
+                            Musique musique = new Musique { Name = name, NameAlbum= dirAlbum.Name, NameArtiste= dirArtiste.Name, Path=file.FullName};
+                            musiquesAlbum.Add(musique);
+                        }
+                        if (file.Extension==".jpg") //a ajouter potentiellement : .png
+                        {
+                            album.Image = file.FullName;
+                            Debug.WriteLine(file.FullName);
+                        }
                     }
-                    
+                    album.ListeMusique = musiquesAlbum;
+                    ListeToutesMusiques.AddRange(musiquesAlbum);
                 }
+                artiste.ListeAlbum = albumsArtiste;
+                ListeArtiste.Add(artiste);
             }
         }
 
