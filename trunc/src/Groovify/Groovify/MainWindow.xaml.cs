@@ -61,6 +61,10 @@ namespace Groovify
         {
             popup.NouvellePlaylist newPlaylist = new popup.NouvellePlaylist();
             newPlaylist.Show();
+            foreach (Playlist playlist in ElManager.ListePlaylists)
+            {
+                Debug.WriteLine("playlists existante : " + playlist);
+            }
         }
         private void MenuItemDelete_Click(object sender, RoutedEventArgs e)
         {
