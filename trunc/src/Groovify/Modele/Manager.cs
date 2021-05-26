@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Linq;
+using System.IO;
+using System.Diagnostics;
 
 namespace Modele
 {
@@ -26,9 +28,30 @@ namespace Modele
             Swiming = new Album { ListeMusique = ListeToutesMusiques };
             listeAlbumsMacMiller.Add(Swiming);
             Mac_Miller = new Artiste("Mac Miller") { ListeAlbum = listeAlbumsMacMiller };
+            ImportFichiers();
         }
 
-
+        //Import des fichiers
+        public void ImportFichiers()
+        {
+            DirectoryInfo di = new DirectoryInfo("./Musiques");
+            DirectoryInfo[] dirArtistes = di.GetDirectories();
+            foreach (DirectoryInfo dirArtiste in dirArtistes)
+            {
+                DirectoryInfo[] dirAlbums = dirArtiste.GetDirectories();
+                foreach (DirectoryInfo dirAlbum in dirAlbums)
+                {
+                    var fichiers = dirAlbum.GetFiles();
+                    foreach (FileInfo file in fichiers)
+                    {
+                        string name = file.Name;
+                        name = Path.GetFileNameWithoutExtension(name);
+                        Debug.WriteLine("DirectoryName : " + file.DirectoryName+ " Extension : " + file.Extension+ " Name : " + name);
+                    }
+                    
+                }
+            }
+        }
 
         // Gestion Playlist
         public bool AjoutePlaylist(Playlist p)
