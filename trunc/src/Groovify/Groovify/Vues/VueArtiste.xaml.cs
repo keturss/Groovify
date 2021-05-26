@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +19,18 @@ namespace Groovify.Vues
     /// </summary>
     public partial class VueArtiste : UserControl
     {
-        public VueArtiste()
+        public Manager ElManager => (App.Current as App).managerTest;
+        
+        public VueArtiste(List<Artiste> AllArtists)
         {
             InitializeComponent();
+            List<ClickableArtist> clickableArtists = new List<ClickableArtist>();
+            foreach (Artiste artiste in AllArtists)
+            {
+                ClickableArtist clickableArtist =new ClickableArtist(artiste);
+                clickableArtists.Add(clickableArtist);
+            }
+            ListeArtistesClickable.ItemsSource = clickableArtists;
         }
     }
 }

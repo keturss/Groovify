@@ -36,4 +36,28 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Musiques\Childish Gambino\81c-v7-enML._SL1406_.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Musiques\Childish Gambino\Because the Internet\3005.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Musiques\Childish Gambino\Because the Internet\81c-v7-enML._SL1406_.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Musiques\Mac Miller\swimming.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Musiques\Mac Miller\Swimming\come-back-to-earth.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Musiques\Mac Miller\Swimming\hurt-feelings.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Musiques\Mac Miller\Swimming\swimming.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

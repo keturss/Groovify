@@ -6,14 +6,11 @@
              xmlns:local="clr-namespace:Groovify.Vues"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Background="#121212">
+    <ListBox x:Name="ListeArtistesClickable" ScrollViewer.HorizontalScrollBarVisibility="Disabled"   Background="#121212">
         <ListBox.ItemsPanel>
             <ItemsPanelTemplate>
                 <WrapPanel IsItemsHost="True" />
             </ItemsPanelTemplate>
         </ListBox.ItemsPanel>
-        <Groovify:ClickableArtist />
-        <Groovify:ClickableArtist />
-        <Groovify:ClickableArtist />
     </ListBox>
 </UserControl>

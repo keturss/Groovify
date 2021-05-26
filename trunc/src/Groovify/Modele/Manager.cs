@@ -12,16 +12,10 @@ namespace Modele
     {
         public ObservableCollection<Playlist> ListePlaylists { get; set; } = new ObservableCollection<Playlist>();
         public List<Artiste> ListeArtiste { get; set; } = new List<Artiste>();
-
         public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>();
-        //public Album Swiming { get; set; }
-        //List<Album> listeAlbumsMacMiller { get; set; } = new List<Album>();
-        public Artiste Mac_Miller { get; set; }
+        
         public Manager()
         {
-            //Swiming = new Album { ListeMusique = ListeToutesMusiques };
-            //listeAlbumsMacMiller.Add(Swiming);
-            //Mac_Miller = new Artiste("Mac Miller") { ListeAlbum = listeAlbumsMacMiller };
             ImportFichiers();
         }
 
@@ -35,6 +29,16 @@ namespace Modele
                 DirectoryInfo[] dirAlbums = dirArtiste.GetDirectories();
                 Artiste artiste = new Artiste { Name = dirArtiste.Name };
                 List<Album> albumsArtiste = new List<Album>();
+                //image artiste
+                FileInfo[] filesInArtist = dirArtiste.GetFiles();
+                foreach (FileInfo fileInfo in filesInArtist)
+                {
+                    if (fileInfo.Extension == ".jpg")
+                    {
+                        artiste.Image = fileInfo.FullName;
+                    }
+                }
+                //albums artiste
                 foreach (DirectoryInfo dirAlbum in dirAlbums)
                 {
                     FileInfo[] fichiers = dirAlbum.GetFiles();
@@ -57,6 +61,7 @@ namespace Modele
                         }
                     }
                     album.ListeMusique = musiquesAlbum;
+                    albumsArtiste.Add(album);
                     ListeToutesMusiques.AddRange(musiquesAlbum);
                 }
                 artiste.ListeAlbum = albumsArtiste;

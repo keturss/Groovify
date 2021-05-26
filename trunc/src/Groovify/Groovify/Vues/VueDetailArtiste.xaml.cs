@@ -24,11 +24,15 @@ namespace Groovify.Vues
             InitializeComponent();
             DataContext = artiste;
             List<Musique> ToutesMusiques = new List<Musique>();
+            List<ClickableAlbum> clickableAlbums = new List<ClickableAlbum>();
             foreach(Album album in artiste.ListeAlbum)
             {
                 ToutesMusiques.AddRange(album.ListeMusique);
+
+                ClickableAlbum clickableAlbum = new ClickableAlbum(album);
+                clickableAlbums.Add(clickableAlbum);
             }
-            Albums.
+            Albums.ItemsSource = clickableAlbums;
             Titres.Content = new Vues.VueTitres(ToutesMusiques);
         }
     }

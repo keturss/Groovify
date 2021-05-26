@@ -27,6 +27,7 @@ namespace Groovify
         {
             InitializeComponent();
             DataContext = ElManager;
+            VuePrincipale.Content = new Vues.VueTitres(ElManager.ListeToutesMusiques);
         }
 
         private void ChangeVueToVueTitres(object sender, RoutedEventArgs e)
@@ -35,20 +36,25 @@ namespace Groovify
         }
         private void ChangeVueToVueAlbum(object sender, RoutedEventArgs e)
         {
-            VuePrincipale.Content = new Vues.VueAlbum();
+            List<Album> ListAllAlbums = new List<Album>();
+            foreach(Artiste artiste in ElManager.ListeArtiste)
+            {
+                ListAllAlbums.AddRange(artiste.ListeAlbum);
+            }
+            VuePrincipale.Content = new Vues.VueAlbum(ListAllAlbums);
         }
         private void ChangeVueToVueArtiste(object sender, RoutedEventArgs e)
         {
-            VuePrincipale.Content = new Vues.VueArtiste();
+            VuePrincipale.Content = new Vues.VueArtiste(ElManager.ListeArtiste);
         }
 
-        public void ChangeVueToVueDetailArtiste()
+        public void ChangeVueToVueDetailArtiste(Artiste artiste)
         {
-            VuePrincipale.Content = new Vues.VueDetailArtiste(ElManager.Mac_Miller);
+            VuePrincipale.Content = new Vues.VueDetailArtiste(artiste);
         }
-        public void ChangeVueToVueDetailAlbum()
+        public void ChangeVueToVueDetailAlbum(Album album)
         {
-            VuePrincipale.Content = new Vues.VueDetailAlbum(ElManager.Swiming);
+            VuePrincipale.Content = new Vues.VueDetailAlbum(album);
         }
 
         private void NewPlaylist(object sender, RoutedEventArgs e)

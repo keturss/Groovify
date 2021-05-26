@@ -11,10 +11,10 @@
         <WrapPanel DockPanel.Dock="Top">
             <Ellipse Height="100" Width="100">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="../Ressources/swimming.jpg"/>
+                    <ImageBrush ImageSource="{Binding Image}"/>
                 </Ellipse.Fill>
             </Ellipse>
-            <TextBlock Text="Mac Miller" Foreground="White"/>
+            <TextBlock Text="{Binding Name}" Foreground="White"/>
         </WrapPanel>
         <Grid DockPanel.Dock="Top">
             <Grid.RowDefinitions>
@@ -30,7 +30,6 @@
                         <StackPanel Orientation="Horizontal" />
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
-                <Groovify:ClickableAlbum/>
             </ListBox>
             <TextBlock Text="Titres" Grid.Row="2" Foreground="White"/>
             <ContentControl x:Name="Titres" Grid.Row="3">
