@@ -7,8 +7,38 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <TextBox Margin="4">
-            
+        <TextBox x:Name="barreRecherche" LostFocus="barreRecherche_LostFocus" TextChanged="barreRecherche_TextChanged" Foreground="White" Margin="4">
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="Rechercher..." Foreground="White"/>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter Property="Background" Value="Transparent" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="Transparent" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
         </TextBox>
+        <Popup x:Name="popupResultats" IsOpen="False" PlacementTarget="{Binding ElementName=barreRecherche}" Width="{Binding RelativeSource={RelativeSource Self}, Path=PlacementTarget.ActualWidth}">
+            <ListBox Foreground="White" Background="Transparent">
+                <ListBoxItem Content="A" />
+                <ListBoxItem Content="B" />
+            </ListBox>
+        </Popup>
     </StackPanel>
 </UserControl>

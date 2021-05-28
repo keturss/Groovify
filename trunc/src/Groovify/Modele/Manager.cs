@@ -48,6 +48,7 @@ namespace Modele
                     {
                         string name = file.Name;
                         name = Path.GetFileNameWithoutExtension(name);
+                        name = name.Replace("-", " ").Replace("_", " "); //remplace _ et - par des espaces
                         Debug.WriteLine("DirectoryName : " + file.DirectoryName+ " Extension : " + file.Extension+ " Name : " + name);
                         if (file.Extension==".mp3") //a ajouter : d'autres formats que mp3 si possible
                         {
@@ -90,36 +91,6 @@ namespace Modele
         public bool SupprimerPlaylist(Playlist p)
         {
             return ListePlaylists.Remove(p); // ca return un bool
-        }
-
-
-        // Gestion musique (CREEATION)
-        public void nouvelleMusique(String name, String nomArtiste, String nomAlbum)
-        {
-            Artiste chercheArtiste = rechercheArtiste(nomArtiste);
-            if (chercheArtiste == null)
-            {
-                chercheArtiste = new Artiste(nomArtiste);
-                ListeArtiste.Add(chercheArtiste);
-                Console.WriteLine("Creation artiste");
-            }
-
-            Album chercheAlbum = rechercheAlbum(nomAlbum, chercheArtiste);
-            if (chercheAlbum == null)
-            {
-                chercheAlbum = new Album(nomAlbum);
-                chercheArtiste.ListeAlbum.Add(chercheAlbum);
-                Console.WriteLine("Creation album");
-            }
-
-            Musique chercheMusique = rechercheMusique(nomAlbum, chercheAlbum);
-            if (chercheMusique == null)
-            {
-                chercheMusique = new Musique(name);
-                chercheAlbum.ListeMusique.Add(chercheMusique);
-                Console.WriteLine("Creation Musique");
-            }
-
         }
 
         // recherche a déplacer dans un interface.
