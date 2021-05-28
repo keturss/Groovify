@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ShowTitleBar="True"
+        MouseDown="MetroWindow_MouseDown"
         Title="Groovify" Height="450" Width="800"
          >
     <mah:MetroWindow.LeftWindowCommands>
@@ -23,7 +24,7 @@
         <Grid DockPanel.Dock="Bottom" Background="#181818">
             <local:MusicPlayer/>
         </Grid>
-        <Grid DockPanel.Dock="Left" Margin="2" Background="#000000" Width="150">
+        <Grid x:Name="gridMenu" Focusable="True" DockPanel.Dock="Left" Margin="2" Background="#000000" Width="150">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>

@@ -22,5 +22,15 @@ namespace Groovify
         {
             InitializeComponent();
         }
+        
+        private void barreRecherche_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            popupResultats.IsOpen = true;
+        }
+
+        private void barreRecherche_LostFocus(object sender, RoutedEventArgs e)
+        {
+            popupResultats.IsOpen = false;
+        }
     }
 }

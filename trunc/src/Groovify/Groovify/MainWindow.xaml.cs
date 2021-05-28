@@ -80,5 +80,10 @@ namespace Groovify
             Playlist playlist = ElManager.recherchePlaylist(playlistToSee.DataContext.ToString());
             VuePrincipale.Content = new Vues.VueTitres(playlist.musiquePlaylist);
         }
+
+        private void MetroWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            gridMenu.Focus();
+        }
     }
 }
