@@ -1589,6 +1589,35 @@
 											}
 										}
 									],
+									"attributes": [
+										{
+											"_type": "UMLAttribute",
+											"_id": "AAAAAAF5043KTQsBYVw=",
+											"_parent": {
+												"$ref": "AAAAAAF5IiDlhnB/Tvw="
+											},
+											"name": "ListePlaylists",
+											"type": "ObservableCollection<Playlist>"
+										},
+										{
+											"_type": "UMLAttribute",
+											"_id": "AAAAAAF505BO4RXd7CU=",
+											"_parent": {
+												"$ref": "AAAAAAF5IiDlhnB/Tvw="
+											},
+											"name": "ListeArtiste",
+											"type": "List<Artiste>"
+										},
+										{
+											"_type": "UMLAttribute",
+											"_id": "AAAAAAF505BjNBfbvXk=",
+											"_parent": {
+												"$ref": "AAAAAAF5IiDlhnB/Tvw="
+											},
+											"name": "ListeToutesMusiques",
+											"type": "List<Musique>"
+										}
+									],
 									"operations": [
 										{
 											"_type": "UMLOperation",
@@ -3846,11 +3875,64 @@
 									"model": {
 										"$ref": "AAAAAAF5IiDlhnB/Tvw="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF5043KkAsNtDA=",
+											"_parent": {
+												"$ref": "AAAAAAF5IiDlhnCHz7o="
+											},
+											"model": {
+												"$ref": "AAAAAAF5043KTQsBYVw="
+											},
+											"font": "Arial;13;0",
+											"left": 813,
+											"top": 886,
+											"width": 397.76318359375,
+											"height": 13,
+											"text": "+ListePlaylists: ObservableCollection<Playlist>",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF505BPBBXpykE=",
+											"_parent": {
+												"$ref": "AAAAAAF5IiDlhnCHz7o="
+											},
+											"model": {
+												"$ref": "AAAAAAF505BO4RXd7CU="
+											},
+											"font": "Arial;13;0",
+											"left": 813,
+											"top": 901,
+											"width": 397.76318359375,
+											"height": 13,
+											"text": "+ListeArtiste: List<Artiste>",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF505BjTxfng+c=",
+											"_parent": {
+												"$ref": "AAAAAAF5IiDlhnCHz7o="
+											},
+											"model": {
+												"$ref": "AAAAAAF505BjNBfbvXk="
+											},
+											"font": "Arial;13;0",
+											"left": 813,
+											"top": 916,
+											"width": 397.76318359375,
+											"height": 13,
+											"text": "+ListeToutesMusiques: List<Musique>",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 808,
 									"top": 881,
 									"width": 407.76318359375,
-									"height": 10
+									"height": 53
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -3873,7 +3955,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 813,
-											"top": 896,
+											"top": 939,
 											"width": 397.76318359375,
 											"height": 13,
 											"text": "+ImportFichiers()",
@@ -3890,7 +3972,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 813,
-											"top": 911,
+											"top": 954,
 											"width": 397.76318359375,
 											"height": 13,
 											"text": "+AjoutePlaylist(Playliste p): bool",
@@ -3907,7 +3989,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 813,
-											"top": 926,
+											"top": 969,
 											"width": 397.76318359375,
 											"height": 13,
 											"text": "+ModifierPlaylist(Playlist p, String name, String newName): bool",
@@ -3924,7 +4006,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 813,
-											"top": 941,
+											"top": 984,
 											"width": 397.76318359375,
 											"height": 13,
 											"text": "+SupprimerPlaylist(Playlist p): bool",
@@ -3933,7 +4015,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 808,
-									"top": 891,
+									"top": 934,
 									"width": 407.76318359375,
 									"height": 68
 								},
@@ -13345,9 +13427,9 @@
 														"$ref": "AAAAAAF5shNtJYRMwos="
 													},
 													"font": "Arial;13;0",
-													"left": 30.55908203125,
+													"left": 32.72998046875,
 													"top": 13,
-													"width": 102.791015625,
+													"width": 115.9052734375,
 													"height": 13,
 													"text": "SequenceDiagram1"
 												},
@@ -13360,7 +13442,7 @@
 													"font": "Arial;13;1",
 													"left": 13,
 													"top": 13,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -13870,9 +13952,9 @@
 														"$ref": "AAAAAAF5sjcEg5Errm0="
 													},
 													"font": "Arial;13;0",
-													"left": 932.3291015625,
+													"left": 935.9599609375,
 													"top": 373,
-													"width": 24.11181640625,
+													"width": 25.578125,
 													"height": 13,
 													"text": "loop"
 												},
@@ -13885,7 +13967,7 @@
 													"font": "Arial;13;1",
 													"left": 909,
 													"top": 373,
-													"width": 18.3291015625,
+													"width": 21.9599609375,
 													"height": 13,
 													"text": "seq"
 												},
@@ -13971,9 +14053,9 @@
 														"$ref": "AAAAAAF5sjftypFdWkI="
 													},
 													"font": "Arial;13;0",
-													"left": 1132.3291015625,
+													"left": 1135.9599609375,
 													"top": 437,
-													"width": 24.11181640625,
+													"width": 25.578125,
 													"height": 13,
 													"text": "loop"
 												},
@@ -13986,7 +14068,7 @@
 													"font": "Arial;13;1",
 													"left": 1109,
 													"top": 437,
-													"width": 18.3291015625,
+													"width": 21.9599609375,
 													"height": 13,
 													"text": "seq"
 												},
@@ -15194,9 +15276,9 @@
 														"$ref": "AAAAAAF5sjLd1JD0tZU="
 													},
 													"font": "Arial;13;0",
-													"left": 748.3291015625,
+													"left": 751.9599609375,
 													"top": 293,
-													"width": 24.11181640625,
+													"width": 25.578125,
 													"height": 13,
 													"text": "loop"
 												},
@@ -15209,7 +15291,7 @@
 													"font": "Arial;13;1",
 													"left": 725,
 													"top": 293,
-													"width": 18.3291015625,
+													"width": 21.9599609375,
 													"height": 13,
 													"text": "seq"
 												},
