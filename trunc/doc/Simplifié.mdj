@@ -102,7 +102,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF5qPj7eajXfpQ="
 									},
-									"name": "Appli",
+									"name": "Groovify",
 									"ownedElements": [
 										{
 											"_type": "UMLDependency",
@@ -697,7 +697,7 @@
 											"top": 518,
 											"width": 63,
 											"height": 13,
-											"text": "Appli"
+											"text": "Groovify"
 										},
 										{
 											"_type": "LabelView",
@@ -6505,7 +6505,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -912,
-											"top": -800,
+											"top": -816,
 											"height": 13
 										},
 										{
@@ -6516,10 +6516,10 @@
 											},
 											"font": "Arial;13;1",
 											"left": 1245,
-											"top": 278,
+											"top": 270,
 											"width": 399,
 											"height": 13,
-											"text": "Appli"
+											"text": "Groovify"
 										},
 										{
 											"_type": "LabelView",
@@ -6530,7 +6530,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -912,
-											"top": -800,
+											"top": -816,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -6544,14 +6544,14 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -912,
-											"top": -800,
+											"top": -816,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1240,
-									"top": 271,
+									"top": 263,
 									"width": 409,
 									"height": 25,
 									"stereotypeLabel": {
@@ -6579,7 +6579,7 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 1240,
-							"top": 256,
+							"top": 248,
 							"width": 409,
 							"height": 265,
 							"nameCompartment": {
@@ -6615,7 +6615,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -336,
-											"top": -72,
+											"top": -88,
 											"height": 13
 										},
 										{
@@ -6626,7 +6626,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 1357,
-											"top": 327,
+											"top": 319,
 											"width": 79.31396484375,
 											"height": 13,
 											"text": "MainWindow"
@@ -6640,10 +6640,10 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -336,
-											"top": -72,
-											"width": 73.67724609375,
+											"top": -88,
+											"width": 86.6708984375,
 											"height": 13,
-											"text": "(from Appli)"
+											"text": "(from Groovify)"
 										},
 										{
 											"_type": "LabelView",
@@ -6654,14 +6654,14 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -336,
-											"top": -72,
+											"top": -88,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1352,
-									"top": 320,
+									"top": 312,
 									"width": 89.31396484375,
 									"height": 25,
 									"stereotypeLabel": {
@@ -6688,7 +6688,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 1352,
-									"top": 345,
+									"top": 337,
 									"width": 89.31396484375,
 									"height": 10
 								},
@@ -6703,7 +6703,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 1352,
-									"top": 355,
+									"top": 347,
 									"width": 89.31396484375,
 									"height": 10
 								},
@@ -6719,7 +6719,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -144,
-									"top": -72,
+									"top": -80,
 									"width": 10,
 									"height": 10
 								},
@@ -6735,7 +6735,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -144,
-									"top": -72,
+									"top": -80,
 									"width": 10,
 									"height": 10
 								}
@@ -6746,7 +6746,7 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 1352,
-							"top": 320,
+							"top": 312,
 							"width": 89.31396484375,
 							"height": 45,
 							"nameCompartment": {
@@ -6794,7 +6794,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -664,
-											"top": -88,
+											"top": -104,
 											"height": 13
 										},
 										{
@@ -6805,7 +6805,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 1533,
-											"top": 423,
+											"top": 415,
 											"width": 41.919921875,
 											"height": 13,
 											"text": "App"
@@ -6819,10 +6819,10 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -664,
-											"top": -88,
-											"width": 73.67724609375,
+											"top": -104,
+											"width": 86.6708984375,
 											"height": 13,
-											"text": "(from Appli)"
+											"text": "(from Groovify)"
 										},
 										{
 											"_type": "LabelView",
@@ -6833,14 +6833,14 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -664,
-											"top": -88,
+											"top": -104,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1528,
-									"top": 416,
+									"top": 408,
 									"width": 51.919921875,
 									"height": 25,
 									"stereotypeLabel": {
@@ -6867,7 +6867,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 1528,
-									"top": 441,
+									"top": 433,
 									"width": 51.919921875,
 									"height": 10
 								},
@@ -6882,7 +6882,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 1528,
-									"top": 451,
+									"top": 443,
 									"width": 51.919921875,
 									"height": 10
 								},
@@ -6898,7 +6898,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -368,
-									"top": -72,
+									"top": -80,
 									"width": 10,
 									"height": 10
 								},
@@ -6914,7 +6914,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -368,
-									"top": -72,
+									"top": -80,
 									"width": 10,
 									"height": 10
 								}
@@ -6925,7 +6925,7 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 1528,
-							"top": 416,
+							"top": 408,
 							"width": 51.919921875,
 							"height": 45,
 							"nameCompartment": {
@@ -6966,7 +6966,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1385,
-									"top": 433,
+									"top": 425,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -6987,7 +6987,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 1370,
-									"top": 433,
+									"top": 425,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -7008,7 +7008,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1414,
-									"top": 434,
+									"top": 426,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -7029,7 +7029,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1502,
-									"top": 448,
+									"top": 440,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -7050,7 +7050,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1499,
-									"top": 462,
+									"top": 454,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -7071,7 +7071,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1506,
-									"top": 421,
+									"top": 413,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -7092,7 +7092,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1385,
-									"top": 383,
+									"top": 375,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -7112,7 +7112,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1371,
-									"top": 386,
+									"top": 378,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -7132,7 +7132,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1412,
-									"top": 379,
+									"top": 371,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -7152,7 +7152,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -208,
-									"top": 56,
+									"top": 48,
 									"width": 10,
 									"height": 10
 								},
@@ -7168,7 +7168,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -208,
-									"top": 56,
+									"top": 48,
 									"width": 10,
 									"height": 10
 								}
@@ -7180,7 +7180,7 @@
 							"tail": {
 								"$ref": "AAAAAAF50pwDYXayqE8="
 							},
-							"points": "1528:440;1400:440;1400:364",
+							"points": "1528:432;1400:432;1400:356",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF50p3IN5T19O4="
@@ -7238,7 +7238,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1566,
-									"top": 337,
+									"top": 329,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -7259,7 +7259,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 1581,
-									"top": 337,
+									"top": 329,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -7280,7 +7280,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1537,
-									"top": 338,
+									"top": 330,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -7297,7 +7297,7 @@
 							"tail": {
 								"$ref": "AAAAAAF50pvT5XW2Kws="
 							},
-							"points": "1440:344;1552:344;1552:416",
+							"points": "1440:336;1552:336;1552:408",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF50p4ywZlhnSk="
@@ -8353,7 +8353,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1544,
-									"top": 479,
+									"top": 471,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -8374,7 +8374,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1557,
-									"top": 482,
+									"top": 474,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -8395,7 +8395,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1516,
-									"top": 475,
+									"top": 467,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -8500,7 +8500,7 @@
 							"tail": {
 								"$ref": "AAAAAAF50pwDYXayqE8="
 							},
-							"points": "1529:460;1529:496;880:496;880:704",
+							"points": "1529:452;1529:496;880:496;880:704",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF50s+p+NOUZBI="
@@ -9075,7 +9075,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Appli",
+					"name": "Groovify",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
