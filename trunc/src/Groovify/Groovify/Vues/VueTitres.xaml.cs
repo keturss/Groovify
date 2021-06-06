@@ -42,6 +42,7 @@ namespace Groovify.Vues
             Debug.WriteLine(clickedMenuItem.Header);
             Playlist playlist = ElManager.recherchePlaylist(clickedMenuItem.Header.ToString());
             playlist.addMusic(titres[musique]);
+            ElManager.Persistance.SauvegardeDonnee(ElManager.ListePlaylists);
         }
         private void ListView_SizeChanged(object sender, SizeChangedEventArgs e)
         {

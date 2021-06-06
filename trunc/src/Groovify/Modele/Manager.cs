@@ -13,11 +13,14 @@ namespace Modele
         public ObservableCollection<Playlist> ListePlaylists { get; set; } = new ObservableCollection<Playlist>();
         public List<Artiste> ListeArtiste { get; set; } = new List<Artiste>();
         public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>();
-                
+        public IPersistance Persistance { get; private set; }
+        
         public Manager(IPersistance persistance)
         {
             ImportFichiers();
-            ListePlaylists=persistance.ChargeDonnee();
+            Persistance = persistance;
+            ListePlaylists= Persistance.ChargeDonnee();
+            Persistance.SauvegardeDonnee(ListePlaylists);
         }
 
         //Import des fichiers

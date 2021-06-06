@@ -31,6 +31,7 @@ namespace Groovify.popup
             Playlist newplaylist = new Playlist { Name = str };
             ElManager.AjoutePlaylist(newplaylist);
             Debug.WriteLine("nouvelle playlist "+str+" ajoutée");
+            ElManager.Persistance.SauvegardeDonnee(ElManager.ListePlaylists);
             this.Close();
         }
         private void AnnulerNouvellePlaylist(object sender, RoutedEventArgs e)
