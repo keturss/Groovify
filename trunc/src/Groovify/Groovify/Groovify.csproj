@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Modele\Modele.csproj" />
+    <ProjectReference Include="..\Stublib\Stublib.csproj" />
   </ItemGroup>
 
   <ItemGroup>

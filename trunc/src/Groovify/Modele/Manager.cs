@@ -13,14 +13,15 @@ namespace Modele
         public ObservableCollection<Playlist> ListePlaylists { get; set; } = new ObservableCollection<Playlist>();
         public List<Artiste> ListeArtiste { get; set; } = new List<Artiste>();
         public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>();
-        
-        public Manager()
+                
+        public Manager(IPersistance persistance)
         {
             ImportFichiers();
+            ListePlaylists=persistance.ChargeDonnee();
         }
 
         //Import des fichiers
-        public void ImportFichiers()
+        private void ImportFichiers()
         {
             DirectoryInfo di = new DirectoryInfo("./Musiques");
             DirectoryInfo[] dirArtistes = di.GetDirectories();
