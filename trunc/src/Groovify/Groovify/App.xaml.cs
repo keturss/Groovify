@@ -18,7 +18,7 @@ namespace Groovify
         public Manager managerTest { get; set; }
         public App()
         {
-            managerTest = new Manager(new Stublib.Stub());
+            managerTest = new Manager(new DataContractPersistance.DataContractPers());
         }
 
     }
