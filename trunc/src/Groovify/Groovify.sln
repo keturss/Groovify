@@ -7,6 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Groovify", "Groovify\Groovi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modele", "Modele\Modele.csproj", "{F353B201-01CA-4A29-9EC4-EA9EB7C02DA3}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataContractPersistance", "DataContractPersistance\DataContractPersistance.csproj", "{50129E90-9537-4D6D-A1F0-A08341984573}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F353B201-01CA-4A29-9EC4-EA9EB7C02DA3} = {F353B201-01CA-4A29-9EC4-EA9EB7C02DA3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stublib", "Stublib\Stublib.csproj", "{F2BC20BE-5BC6-4B94-AB66-144B74DB177E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +28,14 @@ Global
 		{F353B201-01CA-4A29-9EC4-EA9EB7C02DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F353B201-01CA-4A29-9EC4-EA9EB7C02DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F353B201-01CA-4A29-9EC4-EA9EB7C02DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50129E90-9537-4D6D-A1F0-A08341984573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50129E90-9537-4D6D-A1F0-A08341984573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50129E90-9537-4D6D-A1F0-A08341984573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50129E90-9537-4D6D-A1F0-A08341984573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BC20BE-5BC6-4B94-AB66-144B74DB177E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BC20BE-5BC6-4B94-AB66-144B74DB177E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BC20BE-5BC6-4B94-AB66-144B74DB177E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BC20BE-5BC6-4B94-AB66-144B74DB177E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

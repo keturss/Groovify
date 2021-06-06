@@ -8,9 +8,9 @@ namespace Modele
     public class Musique
     {
         public String Name { get; set; }
-        public int Lenght { get; set; }
+        public int Lenght { get; set; } //osef
         public String Path { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } //osef
         public String NameArtiste { get; set; }
         public String NameAlbum { get; set; }
 
