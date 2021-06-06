@@ -21,16 +21,12 @@ namespace DataContractPersistance
             }
             var serializer = new DataContractJsonSerializer(typeof(ObservableCollection<Playlist>));
 
-            ObservableCollection<Playlist> playlists = new ObservableCollection<Playlist>();
-            playlists.Add(new Playlist() { Name = "Test" });
-            /*
             ObservableCollection<Playlist> playlists;
             
-            using (Stream s = File.OpenRead(FilePath))
+            using (Stream s = File.OpenRead(Path.Combine(FilePath, FileName)))
             {
                 playlists = serializer.ReadObject(s) as ObservableCollection<Playlist>;
             }
-            */
             return playlists;
         }
 

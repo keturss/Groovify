@@ -94,6 +94,7 @@ namespace Modele
         }
         public bool SupprimerPlaylist(Playlist p)
         {
+            Persistance.SauvegardeDonnee(ListePlaylists);
             return ListePlaylists.Remove(p); // ca return un bool
         }
 
