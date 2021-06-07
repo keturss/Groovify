@@ -20,12 +20,12 @@ namespace Groovify
     /// </summary>
     public partial class MusicPlayer : UserControl
     {
-        WMPLib.WindowsMediaPlayer Player;
+        public WMPLib.WindowsMediaPlayer Player;
 
         public Manager ElManager => (App.Current as App).managerTest;
         private Musique Musique;
         private Album Album;
-        bool musiquePlaying = false;
+        public bool musiquePlaying = false;
 
         public MusicPlayer(Musique musique)
         {
@@ -52,8 +52,9 @@ namespace Groovify
             Player.URL = Musique.Path;
             Player.controls.play();
         }
-
-        private void Play_Pause(object sender, RoutedEventArgs e)
+        private void Play_Pause_button(object sender, RoutedEventArgs e)
+        { Play_Pause(); }
+        public void Play_Pause()
         {
             if (musiquePlaying)
             {

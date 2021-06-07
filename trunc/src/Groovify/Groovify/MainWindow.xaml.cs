@@ -23,12 +23,14 @@ namespace Groovify
     public partial class MainWindow
     {
         public Manager ElManager => (App.Current as App).managerTest;
+        private MusicPlayer musicPlayer;
         public MainWindow()
         {
             InitializeComponent();
             DataContext = ElManager;
             VuePrincipale.Content = new Vues.VueTitres(ElManager.ListeToutesMusiques);
-            MusicPlayer.Content = new MusicPlayer(ElManager.ListeToutesMusiques[0]);
+            musicPlayer = new MusicPlayer(ElManager.ListeToutesMusiques[0]);
+            MusicPlayer.Content = musicPlayer;
         }
 
         private void ChangeVueToVueTitres(object sender, RoutedEventArgs e)
@@ -59,7 +61,10 @@ namespace Groovify
         }
         public void ChangeTitlePlayed(Musique musique)
         {
-            MusicPlayer.Content = new MusicPlayer(musique);
+            if(musicPlayer.musiquePlaying)
+            { musicPlayer.Play_Pause(); }
+            musicPlayer = new MusicPlayer(musique);
+            MusicPlayer.Content = musicPlayer;
         }
 
         private void NewPlaylist(object sender, RoutedEventArgs e)
