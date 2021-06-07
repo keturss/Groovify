@@ -44,6 +44,7 @@ namespace Groovify.Vues
             playlist.addMusic(titres[musique]);
             ElManager.Persistance.SauvegardeDonnee(ElManager.ListePlaylists);
         }
+        
         private void HandleDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Musique titre_doubleclické = ((ListViewItem)sender).Content as Musique;
