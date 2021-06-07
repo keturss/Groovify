@@ -28,6 +28,7 @@ namespace Groovify
             InitializeComponent();
             DataContext = ElManager;
             VuePrincipale.Content = new Vues.VueTitres(ElManager.ListeToutesMusiques);
+            MusicPlayer.Content = new MusicPlayer(ElManager.ListeToutesMusiques[0]);
         }
 
         private void ChangeVueToVueTitres(object sender, RoutedEventArgs e)

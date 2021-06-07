@@ -17,13 +17,13 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image Margin="10" Source="Ressources/swimming.jpg"/>
-            <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                <Button Background="Transparent" BorderThickness="0">
-                    <TextBlock Text="Hurt Feelings" Foreground="White"/>
+            <Image x:Name="image_musique" Margin="10" Source="{Binding Image}"/>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" x:Name="Textes">
+                <Button Background="Transparent" BorderThickness="0" Click="Button_Click_Name">
+                    <TextBlock Text="{Binding Name}" Foreground="White"/>
                 </Button>
-                <Button Background="Transparent" BorderThickness="0">
-                    <TextBlock Text="Mac Miller" Foreground="White" />
+                <Button Background="Transparent" BorderThickness="0" Click="Button_Click_NameArtiste">
+                    <TextBlock Text="{Binding NameArtiste}" Foreground="White" />
                 </Button>
             </StackPanel>
         </Grid>

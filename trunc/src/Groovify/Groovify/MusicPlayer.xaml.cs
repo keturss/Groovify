@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Modele;
 
 namespace Groovify
 {
@@ -18,9 +19,26 @@ namespace Groovify
     /// </summary>
     public partial class MusicPlayer : UserControl
     {
-        public MusicPlayer()
+        public Manager ElManager => (App.Current as App).managerTest;
+        private Musique Musique;
+        private Album Album;
+        public MusicPlayer(Musique musique)
         {
             InitializeComponent();
+            Textes.DataContext = musique;
+            Musique = musique;
+            Album = ElManager.rechercheAlbum(Musique.NameAlbum, ElManager.rechercheArtiste(Musique.NameArtiste));
+            image_musique.DataContext = Album;
+        }
+
+        private void Button_Click_Name(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_NameArtiste(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailArtiste(ElManager.rechercheArtiste(Musique.NameArtiste));
         }
     }
 }
