@@ -34,6 +34,7 @@ namespace Groovify
             Musique = musique;
             Album = ElManager.rechercheAlbum(Musique.NameAlbum, ElManager.rechercheArtiste(Musique.NameArtiste));
             image_musique.DataContext = Album;
+            music_player();
         }
 
         private void Button_Click_Name(object sender, RoutedEventArgs e)
@@ -50,7 +51,7 @@ namespace Groovify
             Player = new WMPLib.WindowsMediaPlayer();
             Debug.WriteLine(Musique.Path);
             Player.URL = Musique.Path;
-            Player.controls.play();
+            Player.controls.stop();
         }
         private void Play_Pause_button(object sender, RoutedEventArgs e)
         { Play_Pause(); }
@@ -63,7 +64,7 @@ namespace Groovify
             }
             else
             {
-                music_player();
+                Player.controls.play();
                 musiquePlaying = true;
             }
         }
