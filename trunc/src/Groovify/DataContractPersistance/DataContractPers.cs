@@ -11,7 +11,7 @@ namespace DataContractPersistance
 {
     public class DataContractPers : IPersistance
     {
-        public string FilePath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "..//JSON");
+        public string FilePath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "JSON");
         public string FileName { get; set; } = "playlists.json";
         public ObservableCollection<Playlist> ChargeDonnee()
         {
