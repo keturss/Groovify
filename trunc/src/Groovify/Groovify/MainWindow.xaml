@@ -22,7 +22,7 @@
 
     <DockPanel Background="#000000">
         <Grid DockPanel.Dock="Bottom" Background="#181818">
-            <local:MusicPlayer/>
+            <ContentControl x:Name="MusicPlayer"/>
         </Grid>
         <Grid x:Name="gridMenu" Focusable="True" DockPanel.Dock="Left" Margin="2" Background="#000000" Width="150">
             <Grid.RowDefinitions>
