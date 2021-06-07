@@ -57,6 +57,10 @@ namespace Groovify
         {
             VuePrincipale.Content = new Vues.VueDetailAlbum(album);
         }
+        public void ChangeTitlePlayed(Musique musique)
+        {
+            MusicPlayer.Content = new MusicPlayer(musique);
+        }
 
         private void NewPlaylist(object sender, RoutedEventArgs e)
         {
