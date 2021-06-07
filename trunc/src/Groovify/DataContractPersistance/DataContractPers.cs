@@ -20,7 +20,10 @@ namespace DataContractPersistance
                 throw new FileNotFoundException("le fichier est manquant");
             }
             var serializer = new DataContractJsonSerializer(typeof(ObservableCollection<Playlist>));
-
+            if (!File.Exists(Path.Combine(FilePath, FileName)))
+            {
+                throw new FileNotFoundException("le json est manquant");
+            }
             ObservableCollection<Playlist> playlists;
             
             using (Stream s = File.OpenRead(Path.Combine(FilePath, FileName)))
