@@ -6,7 +6,12 @@
              xmlns:local="clr-namespace:Groovify"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <ListView x:Name="ListViewSons" Width="Auto" Background="#121212" SizeChanged="ListView_SizeChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+    <UserControl.Resources>
+        <Style x:Key="itemstyle" TargetType="{x:Type ListViewItem}">
+            <EventSetter Event="MouseDoubleClick" Handler="HandleDoubleClick" />
+        </Style>
+    </UserControl.Resources>
+    <ListView ItemContainerStyle="{StaticResource itemstyle}" x:Name="ListViewSons" Width="Auto" Background="#121212" SizeChanged="ListView_SizeChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
         <ListBox.ContextMenu>
             <ContextMenu x:Name="MenuClickDroitSons">
                 <MenuItem x:Name="MenuItemClickDroitSons" Header="Ajouter à..." ItemsSource="{Binding ListePlaylists}" Click="AddSongToPlaylist"/>
