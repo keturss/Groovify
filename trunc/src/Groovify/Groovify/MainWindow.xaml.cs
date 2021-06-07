@@ -65,6 +65,7 @@ namespace Groovify
             { musicPlayer.Play_Pause(); }
             musicPlayer = new MusicPlayer(musique);
             MusicPlayer.Content = musicPlayer;
+            musicPlayer.Play_Pause();
         }
 
         private void NewPlaylist(object sender, RoutedEventArgs e)

@@ -60,13 +60,20 @@ namespace Groovify
             if (musiquePlaying)
             {
                 Player.controls.pause();
+                playpause_image.Source = new BitmapImage(new Uri(@"Ressources/Icons/play-100.png", UriKind.Relative));
                 musiquePlaying = false;
             }
             else
             {
                 Player.controls.play();
+                playpause_image.Source = new BitmapImage(new Uri(@"Ressources/Icons/pause-96.png", UriKind.Relative));
                 musiquePlaying = true;
             }
+        }
+
+        private void Button_Click_next(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).ChangeTitlePlayed(Musique);
         }
     }
 }
