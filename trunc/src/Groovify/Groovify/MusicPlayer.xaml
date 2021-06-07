@@ -33,9 +33,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Click="Play_Pause_button" Background="Transparent" Height="50" Width="50" BorderThickness="0" HorizontalAlignment="Right">
-                <Image Source="Ressources/Icons/play-100.png"/>
+                <Image x:Name="playpause_image"  Source="Ressources/Icons/play-100.png"/>
             </Button>
-            <Button Grid.Column="1" Background="Transparent" Height="50" Width="50" BorderThickness="0" HorizontalAlignment="Left">
+            <Button Click="Button_Click_next" Grid.Column="1" Background="Transparent" Height="50" Width="50" BorderThickness="0" HorizontalAlignment="Left">
                 <Image Source="Ressources/Icons/next-100.png"/>
             </Button>
         </Grid>

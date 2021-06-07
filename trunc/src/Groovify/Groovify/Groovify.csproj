@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Ressources\Icons\next-100.png" />
+    <None Remove="Ressources\Icons\pause-96.png" />
     <None Remove="Ressources\Icons\play-100.png" />
     <None Remove="Ressources\plus-64.png" />
     <None Remove="Ressources\swimming.jpg" />
@@ -39,6 +40,9 @@
     <Resource Include="Ressources\Icons\next-100.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Ressources\Icons\pause-96.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Ressources\Icons\play-100.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -51,7 +55,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Musiques\Childish Gambino\81c-v7-enML._SL1406_.jpg">
+    <None Update="Musiques\Childish Gambino\2e1d974c14fb66eb5050bf3526c84c4f6e2f47ae.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Musiques\Childish Gambino\Because the Internet\3005.mp3">
@@ -63,13 +67,13 @@
     <None Update="Musiques\Childish Gambino\Summer Pack\Feels Like Summer.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Musiques\Childish Gambino\Summer Pack\R-12270871-1531851013-9764.jpeg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Musiques\Childish Gambino\Summer Pack\Summertime Magic.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Musiques\Childish Gambino\Summer Pack\y2rl6b7ljd911.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Musiques\Mac Miller\swimming.jpg">
+    <None Update="Musiques\Mac Miller\ed63d93ec5348edc9cdf85c97179bbc78cd57292.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Musiques\Mac Miller\Swimming\come-back-to-earth.mp3">
