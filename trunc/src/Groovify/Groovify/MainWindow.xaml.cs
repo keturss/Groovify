@@ -77,6 +77,7 @@ namespace Groovify
 
             int element = ListePlaylists.SelectedIndex;
             ElManager.SupprimerPlaylist(ElManager.ListePlaylists[element]);
+            ElManager.Persistance.SauvegardeDonnee(ElManager.ListePlaylists);
         }
         private void MenuPlaylistVoir(object sender, RoutedEventArgs e)
         {
