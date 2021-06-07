@@ -60,6 +60,15 @@
     <None Update="Musiques\Childish Gambino\Because the Internet\81c-v7-enML._SL1406_.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Musiques\Childish Gambino\Summer Pack\Feels Like Summer.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Musiques\Childish Gambino\Summer Pack\Summertime Magic.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Musiques\Childish Gambino\Summer Pack\y2rl6b7ljd911.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Musiques\Mac Miller\swimming.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
