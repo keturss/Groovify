@@ -35,10 +35,16 @@
             </TextBox.Style>
         </TextBox>
         <Popup x:Name="popupResultats" IsOpen="False" PlacementTarget="{Binding ElementName=barreRecherche}" Width="{Binding RelativeSource={RelativeSource Self}, Path=PlacementTarget.ActualWidth}">
-            <ListBox Foreground="White" Background="Transparent">
-                <ListBoxItem Content="A" />
-                <ListBoxItem Content="B" />
-            </ListBox>
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="Titres" Foreground="White" Background="Transparent"/>
+                <ListBox x:Name="ListBoxTitres" DockPanel.Dock="Top" Foreground="White" Background="Transparent"/>
+                <TextBlock DockPanel.Dock="Top" Text="Artistes" Foreground="White" Background="Transparent"/>
+                <ListBox x:Name="ListBoxArtistes" DockPanel.Dock="Top" Foreground="White" Background="Transparent"/>
+                <TextBlock DockPanel.Dock="Top" Text="Albums" Foreground="White" Background="Transparent"/>
+                <ListBox x:Name="ListBoxAlbums" DockPanel.Dock="Top" Foreground="White" Background="Transparent"/>
+                <TextBlock DockPanel.Dock="Top" Text="Playlists" Foreground="White" Background="Transparent"/>
+                <ListBox x:Name="ListBoxPlaylists" DockPanel.Dock="Top" Foreground="White" Background="Transparent"/>
+            </DockPanel>
         </Popup>
     </StackPanel>
 </UserControl>

@@ -21,7 +21,7 @@ namespace Modele
 
         public override string ToString()
         {
-            return "Artiste => Nom : " + Name;
+            return Name;
         }
     }
 }

@@ -20,6 +20,5 @@ namespace Groovify
         {
             managerTest = new Manager(new DataContractPersistance.DataContractPers());
         }
-
     }
 }
