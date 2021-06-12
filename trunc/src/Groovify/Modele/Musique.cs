@@ -29,7 +29,7 @@ namespace Modele
 
         public override string ToString()
         {
-            return "Musique => Nom : " + Name;
+            return Name;
         }
     }
 

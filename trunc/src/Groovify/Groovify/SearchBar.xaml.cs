@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -45,6 +46,30 @@ namespace Groovify
         private void barreRecherche_LostFocus(object sender, RoutedEventArgs e)
         {
             popupResultats.IsOpen = false;
+        }
+
+
+        private void ListBoxTitres_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ListBoxTitres.SelectedIndex == -1) return;
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailAlbum(ElManager.rechercheAlbum(recherche.musiques[ListBoxTitres.SelectedIndex].NameAlbum, ElManager.rechercheArtiste(recherche.musiques[ListBoxTitres.SelectedIndex].NameArtiste)));
+        }
+        private void ListBoxPlaylists_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ListBoxPlaylists.SelectedIndex == -1) return;
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailPlaylist(recherche.playlists[ListBoxPlaylists.SelectedIndex].musiquePlaylist);
+        }
+
+        private void ListBoxAlbums_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ListBoxAlbums.SelectedIndex == -1) return; 
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailAlbum(recherche.albums[ListBoxAlbums.SelectedIndex]);
+        }
+
+        private void ListBoxArtistes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ListBoxArtistes.SelectedIndex == -1) return;
+            ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailArtiste(recherche.artistes[ListBoxArtistes.SelectedIndex]);
         }
     }
 }

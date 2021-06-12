@@ -59,6 +59,10 @@ namespace Groovify
         {
             VuePrincipale.Content = new Vues.VueDetailAlbum(album);
         }
+        public void ChangeVueToVueDetailPlaylist(List<Musique> playlist)
+        {
+            VuePrincipale.Content = new Vues.VueTitres(playlist);
+        }
         public void ChangeTitlePlayed(Musique musique)
         {
             if(musicPlayer.musiquePlaying)
@@ -90,7 +94,7 @@ namespace Groovify
             Button playlistToSee = (Button)sender;
             Debug.WriteLine(playlistToSee.DataContext);
             Playlist playlist = ElManager.recherchePlaylist(playlistToSee.DataContext.ToString());
-            VuePrincipale.Content = new Vues.VueTitres(playlist.musiquePlaylist);
+            ChangeVueToVueDetailPlaylist(playlist.musiquePlaylist);
         }
 
         private void MetroWindow_MouseDown(object sender, MouseButtonEventArgs e)
