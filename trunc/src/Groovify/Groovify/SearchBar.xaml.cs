@@ -52,6 +52,7 @@ namespace Groovify
         private void ListBoxTitres_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ListBoxTitres.SelectedIndex == -1) return;
+            //le choix a été fait de plutot afficher l'album du titre plutot que le titre seul sur le modele de Spotify (afficher le titre seul serait facilement fesable en recuperant le titre clické et en le fesant afficher par ChangeVueToVueDetailPlaylist)
             ((MainWindow)Application.Current.MainWindow).ChangeVueToVueDetailAlbum(ElManager.rechercheAlbum(recherche.musiques[ListBoxTitres.SelectedIndex].NameAlbum, ElManager.rechercheArtiste(recherche.musiques[ListBoxTitres.SelectedIndex].NameArtiste)));
         }
         private void ListBoxPlaylists_SelectionChanged(object sender, SelectionChangedEventArgs e)
