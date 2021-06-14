@@ -9,11 +9,18 @@ using Modele;
 
 namespace DataContractPersistance
 {
+    /// <summary>
+    /// Sauvegarde des Playlists sous .JSON
+    /// </summary>
     public class DataContractPers : IPersistance
     {
         public string FilePath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "JSON");
         public string FileName { get; set; } = "playlists.json";
 
+        /// <summary>
+        /// Sauvegarde les playlists dans le bon repertoir sous Json
+        /// </summary>
+        /// <param name="playlists">Liste (ObservableCollection) de Playlist a sauvegardé</param>
         public void SauvegardeDonnee(ObservableCollection<Playlist> playlists)
         {
             var serializer = new DataContractJsonSerializer(typeof(ObservableCollection<Playlist>));
@@ -28,6 +35,12 @@ namespace DataContractPersistance
             Debug.WriteLine("donnees saved");
         }
 
+        /// <summary>
+        /// Charge les playlists précedement crée sous format Json
+        /// </summary>
+        /// <returns>
+        /// La liste (ObservableCollection) de playlist chargée
+        /// </returns>
         public ObservableCollection<Playlist> ChargeDonnee()
         {
             if (!Directory.Exists(FilePath))
