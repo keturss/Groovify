@@ -15,6 +15,10 @@ namespace Modele
         public List<Musique> ListeToutesMusiques { get; set; } = new List<Musique>();
         public IPersistance Persistance { get; private set; }
         
+        /// <summary>
+        /// Démarrage de l'appli par le l'import des fichiers (Musiques,Album,Artiste),chargement des playlists et sauvegarde des playlists
+        /// </summary>
+        /// <param name="persistance"></param>
         public Manager(IPersistance persistance)
         {
             ImportFichiers();
@@ -23,7 +27,9 @@ namespace Modele
             Persistance.SauvegardeDonnee(ListePlaylists);
         }
 
-        //Import des fichiers
+        /// <summary>
+        /// Import des Musiques, Album, Artiste
+        /// </summary>
         private void ImportFichiers()
         {
             DirectoryInfo di = new DirectoryInfo("./Musiques");
@@ -74,7 +80,13 @@ namespace Modele
             }
         }
 
-        // Gestion Playlist
+        /// <summary>
+        /// Creer une nouvelle playlist
+        /// </summary>
+        /// <param name="p">Objet playlist a crée</param>
+        /// <returns>
+        /// Boolean pour la création  ou l'échec la création de la playlist
+        /// </returns>
         public bool AjoutePlaylist(Playlist p)
         {
             if (!ListePlaylists.Any(x => x.Name == p.Name))
@@ -86,29 +98,43 @@ namespace Modele
             return false;
         }
 
-        public bool ModifierPlaylist(Playlist p, String name, String newName)
-        {
-            Playlist trouverPlaylist = ListePlaylists.First(x => x.Name == name);
-            trouverPlaylist.Name = newName;
-            return true; // les return bool ne servent strictement a rien
-        }
+        /// <summary>
+        /// Supprime une playlist
+        /// </summary>
+        /// <param name="p">Objet playlist a supprimé</param>
+        /// <returns>
+        /// Boolean pour reussite ou échec de la suppression</returns>
         public bool SupprimerPlaylist(Playlist p)
         {
-            return ListePlaylists.Remove(p); // ca return un bool
+            return ListePlaylists.Remove(p);
         }
 
-        // recherche a déplacer dans un interface.
+
+        //////
+        //Ces Méthodes de recherches peuvent être remplacé par l'interface de recherche une fois terminé
+        //////
+        
+   
+        /// <summary>
+        /// Recherche d'un Artiste dans la liste d'artiste
+        /// </summary>
+        /// <param name="name">Nom de la recherche</param>
+        /// <returns>L'Artiste trouvé</returns>
         public Artiste rechercheArtiste(String name)
         {
             if (ListeArtiste.Exists(x => x.Name == name))
             {
-                Console.WriteLine("artiste trouvée");
                 Artiste trouveArtiste = ListeArtiste.Find(x => x.Name == name);
                 return trouveArtiste;
             }
             return null;
         }
 
+        /// <summary>
+        /// Recherche d'un Album dans la liste d'artiste
+        /// </summary>
+        /// <param name="name">Nom de la recherche</param>
+        /// <returns>L'Album trouvé</returns>
         public Album rechercheAlbum(String name, Artiste nameArtiste)
         {
             if (nameArtiste.ListeAlbum.Exists(x => x.Name == name))
@@ -120,17 +146,11 @@ namespace Modele
             return null;
         }
 
-        public Musique rechercheMusique(String name, Album nomAlbum)
-        {
-            if (nomAlbum.ListeMusique.Exists(x => x.Name == name))
-            {
-                Console.WriteLine("musique trouvée");
-                Musique trouveMusique = nomAlbum.ListeMusique.Find(x => x.Name == name);
-                return trouveMusique;
-            }
-            return null;
-        }
-
+        /// <summary>
+        /// Recherche d'une PLaylist dans la liste d'artiste
+        /// </summary>
+        /// <param name="name">Nom de la recherche</param>
+        /// <returns>Playlist trouvé</returns>
         public Playlist recherchePlaylist(String name)
         {
             if (ListePlaylists.Any(x => x.Name == name))
