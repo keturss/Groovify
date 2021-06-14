@@ -6,6 +6,9 @@ using System.Text;
 
 namespace Modele
 {
+    /// <summary>
+    /// Classe Playlist, contenant toute les informations des playlist et des musiques qui font parties
+    /// </summary>
     [DataContract]
     public class Playlist
     {

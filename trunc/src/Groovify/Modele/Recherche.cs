@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Modele
 {
+    /// <summary>
+    /// Subsitut a l'interface de recherche, mais fonctionnel
+    /// </summary>
     public class Recherche
     {
         public List<Artiste> artistes { get; private set; }
@@ -12,6 +15,15 @@ namespace Modele
         public List<Musique> musiques { get; private set; }
         public List<Playlist> playlists { get; private set; }
         public Recherche(){}
+
+        /// <summary>
+        /// Recherche dans toutes les Liste Artiste, Album, Musique, Playlist en fonction d'un string
+        /// </summary>
+        /// <param name="motRecherché">Saisie par l'utilisateur</param>
+        /// <param name="artistes">Liste Artiste</param>
+        /// <param name="albums">Liste Album</param>
+        /// <param name="musiques">Liste Musique</param>
+        /// <param name="playlists">Liste Playlist</param>
         public void MethodeRecherche(string motRecherché, List<Artiste> artistes, List<Album> albums, List<Musique> musiques, List<Playlist> playlists)
         {
             //voir https://stackoverflow.com/questions/4343336/a-list-of-multiple-data-types, la creation d'une liste contenant des instance est peut etre mieux ?

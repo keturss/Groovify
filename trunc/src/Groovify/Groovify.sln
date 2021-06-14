@@ -12,8 +12,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataContractPersistance", "
 		{F353B201-01CA-4A29-9EC4-EA9EB7C02DA3} = {F353B201-01CA-4A29-9EC4-EA9EB7C02DA3}
 	EndProjectSection
 EndProject
+<<<<<<< .mine
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{1FB98DE3-3F61-413B-A013-2BC4AF3B40CD}"
+EndProject
+||||||| .r76
+=======
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Groovify_Setup", "Groovify_Setup\Groovify_Setup.vdproj", "{F5E45334-7EF9-4128-B19C-7A3E385DCCF2}"
 EndProject
+>>>>>>> .r77
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +38,16 @@ Global
 		{50129E90-9537-4D6D-A1F0-A08341984573}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50129E90-9537-4D6D-A1F0-A08341984573}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50129E90-9537-4D6D-A1F0-A08341984573}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< .mine
+		{1FB98DE3-3F61-413B-A013-2BC4AF3B40CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB98DE3-3F61-413B-A013-2BC4AF3B40CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB98DE3-3F61-413B-A013-2BC4AF3B40CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB98DE3-3F61-413B-A013-2BC4AF3B40CD}.Release|Any CPU.Build.0 = Release|Any CPU
+||||||| .r76
+=======
 		{F5E45334-7EF9-4128-B19C-7A3E385DCCF2}.Debug|Any CPU.ActiveCfg = Debug
 		{F5E45334-7EF9-4128-B19C-7A3E385DCCF2}.Release|Any CPU.ActiveCfg = Release
+>>>>>>> .r77
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
